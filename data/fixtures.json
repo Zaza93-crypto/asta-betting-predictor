@@ -1,6 +1,10 @@
 {
-  "source":"demo",
-  "updated":"V2 fallback dataset",
-  "matches":[],
-  "performance":{"tracked":0,"correct":0,"accuracy":null}
+  "source": "api-football",
+  "updated": "2026-10-07T14:16:04Z",
+  "matches": [],
+  "performance": {
+    "tracked": 0,
+    "correct": 0,
+    "accuracy": null
+  }
 }
