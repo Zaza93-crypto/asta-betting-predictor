@@ -1,0 +1,8 @@
+{
+  "generated_at": null,
+  "model_version": "asta-v1-rating-baseline",
+  "accuracy_status": "NOT_VALIDATED",
+  "accuracy_note": "Placeholder. Run scripts/predict.py to generate predictions.",
+  "total_predictions": 0,
+  "predictions": []
+}

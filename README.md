@@ -1,21 +1,34 @@
-# Asta Betting Predictor V2
+# Asta Football Predictor — Prediction Engine v1
 
-V2 adds a live-data architecture using API-Football and GitHub Actions.
+## What this adds
+
+- Reads the live fixture file created by `scripts/fetch_data.py`
+- Produces Home/Draw/Away probabilities
+- Applies HIGH/MEDIUM/LOW confidence labels
+- Writes results to `data/predictions.json`
+- Clearly marks the model as **NOT VALIDATED**
+- Provides a starter workflow for automatic fixture fetching and prediction generation
 
 ## Important
-The site is an analytics/prediction tool. Predictions are estimates and are not guaranteed. Do not publish unsupported accuracy claims.
 
-## Setup
-1. Create an API-Football account and obtain an API key.
-2. In GitHub: **Settings → Secrets and variables → Actions → New repository secret**.
-3. Name the secret exactly `API_FOOTBALL_KEY`.
-4. Paste the API key as the value.
-5. Push this project to the `main` branch.
-6. Run **Actions → Update football data → Run workflow** once to test.
-7. The workflow also runs every 6 hours and commits updated `data/fixtures.json`.
-8. GitHub Pages serves the updated JSON to the website.
+This is a baseline model, not a proven 85% or 93% accurate system. The next development phase is historical back-testing using actual past results. Only then should accuracy, calibration, or profitability claims be made.
 
-The free API-Football plan currently provides 100 requests/day. This workflow intentionally uses a small set of competitions and only requests predictions for returned fixtures.
+## Files
 
-## Next development
-Add a proper local model/backtest, historical prediction storage, verified result settlement, and accuracy metrics. Do not treat provider predictions as proof of our own model's performance.
+- `scripts/predict.py` — prediction engine
+- `data/team_ratings.json` — starting team ratings; replace with validated ratings/statistics
+- `data/predictions.json` — generated prediction output
+- `.github/workflows/asta-predictor.yml` — example automation workflow
+
+## Run locally
+
+```bash
+python scripts/predict.py
+```
+
+If your existing workflow already fetches fixtures, add the prediction step immediately after the fetch step:
+
+```yaml
+- name: Generate predictions
+  run: python scripts/predict.py
+```
