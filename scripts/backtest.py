@@ -141,10 +141,10 @@ def update(state, m):
     hp = points(hg, ag)
     ap = points(ag, hg)
 
-    state["recent"][h].append((hp, hg, ag))
-    state["recent"][a].append((ap, ag, hg))
-    state["home"][h].append((hp, hg, ag))
-    state["away"][a].append((ap, ag))
+  state["recent"][h].append((hp, hg, ag))
+state["recent"][a].append((ap, ag, hg))
+state["home"][h].append((hp, hg, ag))
+state["away"][a].append((ap, ag, hg))
     state["seen"][h] += 1
     state["seen"][a] += 1
 
