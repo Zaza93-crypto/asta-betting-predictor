@@ -1,257 +1,148 @@
 #!/usr/bin/env python3
 """
-Asta Football Predictor v2.
+Asta V3 FINAL live predictor.
 
-Feature-based baseline using information available before a match:
-- sequential Elo/team strength
-- recent points per match
-- recent goals for/against
-- home/away-specific recent performance
-- recency weighting
-
-For live fixtures, data/historical_matches.json is used as the historical
-knowledge base. If it is unavailable, the model falls back to neutral features.
-
-This is a predictive baseline, not a guarantee of accuracy.
+Trains on all available historical matches and predicts current fixtures.
+Training uses only completed historical matches. Accuracy is NOT claimed here;
+the backtest report is the authority for historical performance.
 """
 
-import json
-import math
+import json, math, sys
 from collections import defaultdict, deque
-from datetime import datetime
 from pathlib import Path
 
+try:
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import Pipeline
+    from sklearn.preprocessing import StandardScaler
+except ImportError:
+    print("ERROR: scikit-learn is required. Run: pip install -r requirements.txt")
+    sys.exit(1)
+
 ROOT = Path(__file__).resolve().parents[1]
-FIXTURES = ROOT / "data" / "fixtures.json"
 HISTORY = ROOT / "data" / "historical_matches.json"
-RATINGS = ROOT / "data" / "team_ratings.json"
+FIXTURES = ROOT / "data" / "fixtures.json"
 OUTPUT = ROOT / "data" / "predictions.json"
 
+def outcome(hg, ag):
+    return 0 if hg > ag else 1 if hg == ag else 2
 
-def load(path, default):
-    if not path.exists():
-        return default
-    return json.loads(path.read_text(encoding="utf-8"))
+def points(gf, ga):
+    return 3 if gf > ga else 1 if gf == ga else 0
 
+def avg(seq, idx, default=0.0):
+    return sum(x[idx] for x in seq)/len(seq) if seq else default
 
-def norm(s):
-    return " ".join(str(s or "").strip().lower().split())
+def vector(h,a):
+    return [
+        (h["elo"]-a["elo"])/400, 1.0,
+        h["form5"]-a["form5"], h["form10"]-a["form10"],
+        h["gf5"]-a["gf5"], h["ga5"]-a["ga5"], h["gd5"]-a["gd5"],
+        h["gf10"]-a["gf10"], h["ga10"]-a["ga10"], h["gd10"]-a["gd10"],
+        h["venue_form5"]-a["venue_form5"], h["venue_form5"]-a["venue_form5"],
+        h["venue_gf5"]-a["venue_gf5"], h["venue_gf5"]-a["venue_gf5"],
+        h["venue_ga5"]-a["venue_ga5"], h["venue_ga5"]-a["venue_ga5"],
+        h["venue_gd5"]-a["venue_gd5"], h["venue_gd5"]-a["venue_gd5"],
+        math.log1p(h["matches"])-math.log1p(a["matches"]),
+        math.log1p(a["matches"])-math.log1p(h["matches"])
+    ]
 
-
-def team_name(match, side):
-    if side == "home":
-        candidates = ["home_team", "homeTeam", "home", "home_name"]
-        nested = ["homeTeam", "home"]
-    else:
-        candidates = ["away_team", "awayTeam", "away", "away_name"]
-        nested = ["awayTeam", "away"]
-    for k in candidates:
-        if match.get(k):
-            return str(match[k])
-    for k in nested:
-        if isinstance(match.get(k), dict):
-            return str(match[k].get("name") or match[k].get("team") or "")
-    return ""
-
-
-def competition(match):
-    c = match.get("competition") or match.get("league") or ""
-    return str(c.get("name") if isinstance(c, dict) else c)
-
-
-def fixture_id(match, i):
-    return str(match.get("id") or match.get("fixture_id") or match.get("match_id") or f"fixture-{i+1}")
-
-
-def parse_history(payload):
-    matches = payload.get("matches", []) if isinstance(payload, dict) else payload
-    out = []
-    for m in matches:
-        s = m.get("score") or {}
-        h, a = s.get("home"), s.get("away")
-        if not isinstance(h, int) or not isinstance(a, int):
-            continue
-        home, away = m.get("home_team"), m.get("away_team")
-        if not home or not away:
-            continue
-        out.append({
-            "date": m.get("date") or "",
-            "home": home, "away": away,
-            "hg": h, "ag": a,
-            "competition": m.get("competition", "")
-        })
-    out.sort(key=lambda x: x["date"])
-    return out
-
-
-def build_features(history, ratings):
-    # Each team keeps only its latest 10 matches.
-    recent = defaultdict(lambda: deque(maxlen=10))
-    home_recent = defaultdict(lambda: deque(maxlen=8))
-    away_recent = defaultdict(lambda: deque(maxlen=8))
-    elo = defaultdict(lambda: 1500.0)
-
-    for m in history:
-        h, a, hg, ag = m["home"], m["away"], m["hg"], m["ag"]
-
-        # Update team histories AFTER this match.
-        recent[h].append((1 if hg > ag else 2 if hg == ag else 0, hg, ag))
-        recent[a].append((1 if ag > hg else 2 if hg == ag else 0, ag, hg))
-        home_recent[h].append((1 if hg > ag else 2 if hg == ag else 0, hg, ag))
-        away_recent[a].append((1 if ag > hg else 2 if hg == ag else 0, ag, hg))
-
-        expected = 1 / (1 + 10 ** (-((elo[h] + 55) - elo[a]) / 400))
-        actual = 1.0 if hg > ag else 0.5 if hg == ag else 0.0
-        change = 20 * (actual - expected)
-        elo[h] += change
-        elo[a] -= change
-
-    # Seed from optional ratings only when they exist and team has no learned Elo.
-    for name, value in ratings.items():
-        try:
-            if norm(name) not in {norm(k) for k in elo.keys()}:
-                elo[name] = float(value)
-        except Exception:
-            pass
-
-    def lookup(store, team):
-        key = norm(team)
-        for name, values in store.items():
-            if norm(name) == key:
-                return values
-        return []
-
-    return recent, home_recent, away_recent, elo, lookup
-
-
-def avg(values, index, default):
-    if not values:
-        return default
-    return sum(v[index] for v in values) / len(values)
-
-
-def feature_vector(team, recent, home_recent, away_recent, elo, lookup, venue):
-    r = lookup(recent, team)
-    venue_data = lookup(home_recent if venue == "home" else away_recent, team)
-
-    points = avg(r, 0, 1.0)
-    gf = avg(r, 1, 1.35)
-    ga = avg(r, 2, 1.35)
-    vpoints = avg(venue_data, 0, 1.0)
-    vgf = avg(venue_data, 1, 1.35)
-    vga = avg(venue_data, 2, 1.35)
-
-    rating = 1500.0
-    for name, value in elo.items():
-        if norm(name) == norm(team):
-            rating = float(value)
-            break
-
+def team_features(state, team, venue):
+    r=list(state["recent"][team]); v=list(state[venue][team])
     return {
-        "elo": rating,
-        "points": points,
-        "gf": gf,
-        "ga": ga,
-        "venue_points": vpoints,
-        "venue_gf": vgf,
-        "venue_ga": vga,
+        "elo":state["elo"][team],
+        "form5":avg(r[-5:],0,1),"form10":avg(r[-10:],0,1),
+        "gf5":avg(r[-5:],1,1.2),"ga5":avg(r[-5:],2,1.2),
+        "gd5":avg(r[-5:],1,1.2)-avg(r[-5:],2,1.2),
+        "gf10":avg(r[-10:],1,1.2),"ga10":avg(r[-10:],2,1.2),
+        "gd10":avg(r[-10:],1,1.2)-avg(r[-10:],2,1.2),
+        "venue_form5":avg(v[-5:],0,1),"venue_gf5":avg(v[-5:],1,1.2),
+        "venue_ga5":avg(v[-5:],2,1.2),
+        "venue_gd5":avg(v[-5:],1,1.2)-avg(v[-5:],2,1.2),
+        "matches":state["seen"][team]
     }
 
-
-def predict(home, away, features):
-    hf, af = features
-    elo_diff = ((hf["elo"] + 55) - af["elo"]) / 400.0
-
-    # Goal expectation. These coefficients are intentionally modest:
-    # v2 is a baseline to validate, not an overfit model.
-    attack = 0.45 * (hf["gf"] - af["ga"]) + 0.35 * (hf["venue_gf"] - af["venue_ga"])
-    defense = 0.35 * (af["gf"] - hf["ga"]) + 0.25 * (af["venue_gf"] - hf["venue_ga"])
-    form = 0.22 * (hf["points"] - af["points"]) + 0.18 * (hf["venue_points"] - af["venue_points"])
-
-    home_score = 0.95 + 0.75 * elo_diff + 0.18 * attack + 0.12 * form
-    away_score = 0.95 - 0.75 * elo_diff + 0.18 * defense - 0.12 * form
-
-    home_score = max(0.20, min(3.80, home_score))
-    away_score = max(0.20, min(3.80, away_score))
-
-    # Poisson score grid, 0-6 goals.
-    probs = {"home_win": 0.0, "draw": 0.0, "away_win": 0.0}
-    for hg in range(7):
-        for ag in range(7):
-            p_h = math.exp(-home_score) * home_score ** hg / math.factorial(hg)
-            p_a = math.exp(-away_score) * away_score ** ag / math.factorial(ag)
-            p = p_h * p_a
-            if hg > ag:
-                probs["home_win"] += p
-            elif hg == ag:
-                probs["draw"] += p
-            else:
-                probs["away_win"] += p
-
-    total = sum(probs.values())
-    return {k: v / total for k, v in probs.items()}
-
-
-def confidence(probs):
-    vals = sorted(probs.values(), reverse=True)
-    top, second = vals[0], vals[1]
-    if top >= 0.68 and top - second >= 0.20:
-        return "HIGH"
-    if top >= 0.56 and top - second >= 0.10:
-        return "MEDIUM"
-    return "LOW"
-
+def update(state,m):
+    h,a=m["home_team"],m["away_team"]; hg,ag=m["home_goals"],m["away_goals"]
+    hp,ap=points(hg,ag),points(ag,hg)
+    state["recent"][h].append((hp,hg,ag)); state["recent"][a].append((ap,ag,hg))
+    state["home"][h].append((hp,hg,ag)); state["away"][a].append((ap,ag,hg))
+    state["seen"][h]+=1; state["seen"][a]+=1
+    expected=1/(1+10**(-((state["elo"][h]+55)-state["elo"][a])/400))
+    actual=1 if hg>ag else .5 if hg==ag else 0
+    change=20*(actual-expected)
+    state["elo"][h]+=change; state["elo"][a]-=change
 
 def main():
-    fixtures = load(FIXTURES, [])
-    if isinstance(fixtures, dict):
-        fixtures = fixtures.get("fixtures") or fixtures.get("matches") or fixtures.get("data") or []
-
-    history = parse_history(load(HISTORY, {"matches": []}))
-    ratings = load(RATINGS, {})
-
-    recent, home_recent, away_recent, elo, lookup = build_features(history, ratings)
-
-    labels = {"home_win": "HOME WIN", "draw": "DRAW", "away_win": "AWAY WIN"}
-    output = []
-
-    for i, match in enumerate(fixtures):
-        home, away = team_name(match, "home"), team_name(match, "away")
-        if not home or not away:
+    hist=json.loads(HISTORY.read_text(encoding="utf-8"))
+    matches=sorted(hist.get("matches",[]),key=lambda x:x.get("date") or "")
+    state={
+        "elo":defaultdict(lambda:1500.0),
+        "recent":defaultdict(lambda:deque(maxlen=10)),
+        "home":defaultdict(lambda:deque(maxlen=5)),
+        "away":defaultdict(lambda:deque(maxlen=5)),
+        "seen":defaultdict(int)
+    }
+    X=[]; y=[]
+    for m in matches:
+        h,a=m.get("home_team"),m.get("away_team"); s=m.get("score") or {}
+        if not h or not a or not isinstance(s.get("home"),int) or not isinstance(s.get("away"),int):
             continue
+        X.append(vector(team_features(state,h,"home"),team_features(state,a,"away")))
+        y.append(outcome(s["home"],s["away"]))
+        update(state,{"home_team":h,"away_team":a,"home_goals":s["home"],"away_goals":s["away"]})
 
-        hf = feature_vector(home, recent, home_recent, away_recent, elo, lookup, "home")
-        af = feature_vector(away, recent, home_recent, away_recent, elo, lookup, "away")
-        p = predict(home, away, (hf, af))
-        key = max(p, key=p.get)
+    if len(X)<250 or len(set(y))<3:
+        raise RuntimeError("Not enough historical data to train V3.")
 
-        output.append({
-            "fixture_id": fixture_id(match, i),
-            "date": match.get("date") or match.get("utcDate") or match.get("match_date"),
-            "competition": competition(match),
-            "home_team": home,
-            "away_team": away,
-            "probabilities": {k: round(v * 100, 2) for k, v in p.items()},
-            "prediction": labels[key],
-            "confidence": confidence(p),
-            "model_version": "asta-v2-form-elo-poisson",
-            "validated_accuracy": None,
-            "status": "PENDING_RESULT"
+    model=Pipeline([
+        ("scale",StandardScaler()),
+        ("clf",LogisticRegression(C=.25,max_iter=1500,class_weight="balanced",random_state=42))
+    ])
+    model.fit(X,y)
+
+    fixtures=json.loads(FIXTURES.read_text(encoding="utf-8"))
+    if isinstance(fixtures,dict):
+        fixtures=fixtures.get("fixtures") or fixtures.get("matches") or fixtures.get("data") or []
+
+    labels={0:"HOME WIN",1:"DRAW",2:"AWAY WIN"}
+    predictions=[]
+    for i,m in enumerate(fixtures):
+        h=m.get("home_team") or m.get("homeTeam",{}).get("name") if isinstance(m.get("homeTeam"),dict) else m.get("home_team") or m.get("homeTeam")
+        a=m.get("away_team") or m.get("awayTeam",{}).get("name") if isinstance(m.get("awayTeam"),dict) else m.get("away_team") or m.get("awayTeam")
+        if not h or not a: continue
+        p=model.predict_proba([vector(team_features(state,h,"home"),team_features(state,a,"away"))])[0]
+        classes=list(model.named_steps["clf"].classes_)
+        probs={int(c):0.0 for c in [0,1,2]}
+        for c,val in zip(classes,p): probs[int(c)]=float(val)
+        key=max(probs,key=probs.get)
+        top=probs[key]; confidence="HIGH" if top>=.65 else "MEDIUM" if top>=.55 else "LOW"
+        predictions.append({
+            "fixture_id":str(m.get("id") or m.get("fixture_id") or f"fixture-{i+1}"),
+            "date":m.get("date") or m.get("utcDate"),
+            "competition":m.get("competition") or m.get("league") or "",
+            "home_team":h,"away_team":a,
+            "probabilities":{
+                "home_win":round(probs[0]*100,2),
+                "draw":round(probs[1]*100,2),
+                "away_win":round(probs[2]*100,2)
+            },
+            "prediction":labels[key],
+            "confidence":confidence,
+            "model_version":"asta-v3-final-walkforward-logistic",
+            "status":"PENDING_RESULT"
         })
 
-    result = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "model_version": "asta-v2-form-elo-poisson",
-        "accuracy_status": "NOT_VALIDATED",
-        "accuracy_note": "Use the chronological backtest before making accuracy claims.",
-        "historical_features_available": bool(history),
-        "total_predictions": len(output),
-        "predictions": output
+    result={
+        "generated_at":__import__("datetime").datetime.utcnow().isoformat()+"Z",
+        "model_version":"asta-v3-final-walkforward-logistic",
+        "accuracy_status":"NOT_VALIDATED",
+        "accuracy_note":"Historical accuracy is reported only by data/backtest_report.json.",
+        "total_predictions":len(predictions),
+        "predictions":predictions
     }
-    OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"SUCCESS: Generated {len(output)} v2 predictions.")
-    print("Model status: NOT VALIDATED")
+    OUTPUT.write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding="utf-8")
+    print(f"SUCCESS: Generated {len(predictions)} V3 predictions.")
 
-
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
