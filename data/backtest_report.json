@@ -1,61 +1,92 @@
 {
-  "generated_at": "2026-10-07T16:18:40.404982Z",
-  "model_version": "asta-v2-form-elo-poisson",
+  "generated_at": "2026-10-07T16:51:47.658985Z",
+  "model_version": "asta-v3-final-walkforward-logistic",
   "status": "BACKTESTED",
-  "baseline_comparison": {
+  "design": {
+    "method": "expanding-window walk-forward logistic regression",
+    "warmup_matches": 250,
+    "leakage_control": "Each match is predicted before its result enters training state.",
+    "features": [
+      "elo_diff",
+      "home_advantage",
+      "form5_diff",
+      "form10_diff",
+      "gf5_diff",
+      "ga5_diff",
+      "gd5_diff",
+      "gf10_diff",
+      "ga10_diff",
+      "gd10_diff",
+      "home_form5",
+      "away_form5",
+      "home_gf5",
+      "away_gf5",
+      "home_ga5",
+      "away_ga5",
+      "home_gd5",
+      "away_gd5",
+      "home_matches",
+      "away_matches"
+    ],
+    "regularization": "C=0.25",
+    "class_weight": "balanced"
+  },
+  "previous_versions": {
     "v1_accuracy": 0.4874,
+    "v2_accuracy": 0.4829,
     "v1_matches_tested": 1752,
-    "comparison_note": "V2 should be compared on the same historical sample when possible."
+    "v2_matches_tested": 1752
   },
   "metrics": {
-    "matches_tested": 1752,
-    "correct_predictions": 846,
-    "accuracy": 0.4829,
-    "brier_score": 0.624194,
-    "multiclass_log_loss": 1.037608
+    "matches_tested": 1502,
+    "correct_predictions": 661,
+    "accuracy": 0.4401,
+    "brier_score": 0.633851,
+    "multiclass_log_loss": 1.055591
   },
   "by_competition": {
-    "PD": {
-      "matches": 380,
-      "correct": 189,
-      "accuracy": 0.4974
+    "BL1": {
+      "matches": 265,
+      "correct": 126,
+      "accuracy": 0.4755
     },
     "FL1": {
-      "matches": 306,
-      "correct": 145,
-      "accuracy": 0.4739
-    },
-    "PL": {
-      "matches": 380,
-      "correct": 172,
-      "accuracy": 0.4526
-    },
-    "BL1": {
-      "matches": 306,
-      "correct": 152,
-      "accuracy": 0.4967
+      "matches": 259,
+      "correct": 107,
+      "accuracy": 0.4131
     },
     "SA": {
-      "matches": 380,
-      "correct": 188,
-      "accuracy": 0.4947
+      "matches": 338,
+      "correct": 163,
+      "accuracy": 0.4822
+    },
+    "PL": {
+      "matches": 324,
+      "correct": 142,
+      "accuracy": 0.4383
+    },
+    "PD": {
+      "matches": 316,
+      "correct": 123,
+      "accuracy": 0.3892
     }
   },
   "by_confidence": {
     "LOW_UNDER_55": {
-      "matches": 1665,
-      "correct": 778,
-      "accuracy": 0.4673
+      "matches": 1201,
+      "correct": 465,
+      "accuracy": 0.3872
     },
     "MEDIUM_55_64": {
-      "matches": 77,
-      "correct": 62,
-      "accuracy": 0.8052
+      "matches": 201,
+      "correct": 123,
+      "accuracy": 0.6119
     },
     "HIGH_65_PLUS": {
-      "matches": 10,
-      "correct": 6,
-      "accuracy": 0.6
+      "matches": 100,
+      "correct": 73,
+      "accuracy": 0.73
     }
-  }
+  },
+  "decision_rule": "Do not claim superiority unless V3 beats the relevant baseline on an appropriate out-of-sample sample."
 }
