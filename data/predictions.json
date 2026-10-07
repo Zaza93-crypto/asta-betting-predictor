@@ -1,8 +1,825 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-10-07T15:33:05.503285+00:00",
   "model_version": "asta-v1-rating-baseline",
   "accuracy_status": "NOT_VALIDATED",
-  "accuracy_note": "Placeholder. Run scripts/predict.py to generate predictions.",
-  "total_predictions": 0,
-  "predictions": []
+  "accuracy_note": "Accuracy will only be reported after historical back-testing.",
+  "total_predictions": 48,
+  "predictions": [
+    {
+      "fixture_id": "565820",
+      "date": "2026-10-09T18:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "Borussia Dortmund",
+      "away_team": "SV Werder Bremen",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559669",
+      "date": "2026-10-09T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Racing Club de Lens",
+      "away_team": "Olympique Lyonnais",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564706",
+      "date": "2026-10-09T19:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Málaga CF",
+      "away_team": "RCD Espanyol de Barcelona",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560593",
+      "date": "2026-10-10T11:30:00Z",
+      "competition": "Premier League",
+      "home_team": "Arsenal FC",
+      "away_team": "Leeds United FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564698",
+      "date": "2026-10-10T12:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Rayo Vallecano de Madrid",
+      "away_team": "Athletic Club",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558588",
+      "date": "2026-10-10T13:00:00Z",
+      "competition": "Serie A",
+      "home_team": "Genoa CFC",
+      "away_team": "ACF Fiorentina",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565812",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "1. FSV Mainz 05",
+      "away_team": "Bayer 04 Leverkusen",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565818",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "TSG 1899 Hoffenheim",
+      "away_team": "Hamburger SV",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565817",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "1. FC Union Berlin",
+      "away_team": "SV 07 Elversberg",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565813",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "SC Paderborn 07",
+      "away_team": "VfB Stuttgart",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565819",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "FC Augsburg",
+      "away_team": "FC Bayern München",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560592",
+      "date": "2026-10-10T14:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Sunderland AFC",
+      "away_team": "Brighton & Hove Albion FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560601",
+      "date": "2026-10-10T14:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Aston Villa FC",
+      "away_team": "Brentford FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560599",
+      "date": "2026-10-10T14:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Ipswich Town FC",
+      "away_team": "Fulham FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560595",
+      "date": "2026-10-10T14:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Chelsea FC",
+      "away_team": "AFC Bournemouth",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564699",
+      "date": "2026-10-10T14:15:00Z",
+      "competition": "La Liga",
+      "home_team": "Deportivo Alavés",
+      "away_team": "Club Atlético de Madrid",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559674",
+      "date": "2026-10-10T15:15:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Lille OSC",
+      "away_team": "Le Havre AC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558582",
+      "date": "2026-10-10T16:00:00Z",
+      "competition": "Serie A",
+      "home_team": "FC Internazionale Milano",
+      "away_team": "Parma Calcio 1913",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564700",
+      "date": "2026-10-10T16:30:00Z",
+      "competition": "La Liga",
+      "home_team": "FC Barcelona",
+      "away_team": "Getafe CF",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565815",
+      "date": "2026-10-10T16:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "RB Leipzig",
+      "away_team": "Eintracht Frankfurt",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560600",
+      "date": "2026-10-10T16:30:00Z",
+      "competition": "Premier League",
+      "home_team": "Manchester United FC",
+      "away_team": "Tottenham Hotspur FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559666",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Stade Brestois 29",
+      "away_team": "Angers SCO",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559672",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Paris Saint-Germain FC",
+      "away_team": "Le Mans FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559668",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "FC Lorient",
+      "away_team": "Paris FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558586",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Serie A",
+      "home_team": "SSC Napoli",
+      "away_team": "Frosinone Calcio",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559673",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "AS Monaco FC",
+      "away_team": "Toulouse FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564702",
+      "date": "2026-10-10T19:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Real Madrid CF",
+      "away_team": "Villarreal CF",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558585",
+      "date": "2026-10-11T10:30:00Z",
+      "competition": "Serie A",
+      "home_team": "Como 1907",
+      "away_team": "AS Roma",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564703",
+      "date": "2026-10-11T12:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Elche CF",
+      "away_team": "RC Celta de Vigo",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559670",
+      "date": "2026-10-11T13:00:00Z",
+      "competition": "Ligue 1",
+      "home_team": "OGC Nice",
+      "away_team": "RC Strasbourg Alsace",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560594",
+      "date": "2026-10-11T13:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Hull City AFC",
+      "away_team": "Everton FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558581",
+      "date": "2026-10-11T13:00:00Z",
+      "competition": "Serie A",
+      "home_team": "US Lecce",
+      "away_team": "Bologna FC 1909",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560596",
+      "date": "2026-10-11T13:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Crystal Palace FC",
+      "away_team": "Nottingham Forest FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558583",
+      "date": "2026-10-11T13:00:00Z",
+      "competition": "Serie A",
+      "home_team": "SS Lazio",
+      "away_team": "AC Monza",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565814",
+      "date": "2026-10-11T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "1. FC Köln",
+      "away_team": "Borussia Mönchengladbach",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564707",
+      "date": "2026-10-11T14:15:00Z",
+      "competition": "La Liga",
+      "home_team": "Real Sociedad de Fútbol",
+      "away_team": "RC Deportivo La Coruña",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559667",
+      "date": "2026-10-11T15:15:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Stade Rennais FC 1901",
+      "away_team": "AJ Auxerre",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560598",
+      "date": "2026-10-11T15:30:00Z",
+      "competition": "Premier League",
+      "home_team": "Liverpool FC",
+      "away_team": "Manchester City FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "565816",
+      "date": "2026-10-11T15:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "SC Freiburg",
+      "away_team": "FC Schalke 04",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558580",
+      "date": "2026-10-11T16:00:00Z",
+      "competition": "Serie A",
+      "home_team": "US Sassuolo Calcio",
+      "away_team": "AC Milan",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564701",
+      "date": "2026-10-11T16:30:00Z",
+      "competition": "La Liga",
+      "home_team": "Real Betis Balompié",
+      "away_team": "CA Osasuna",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558584",
+      "date": "2026-10-11T18:45:00Z",
+      "competition": "Serie A",
+      "home_team": "Cagliari Calcio",
+      "away_team": "Juventus FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "559671",
+      "date": "2026-10-11T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "ES Troyes AC",
+      "away_team": "Olympique de Marseille",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564705",
+      "date": "2026-10-11T19:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Real Racing Club de Santander",
+      "away_team": "Valencia CF",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558579",
+      "date": "2026-10-12T16:30:00Z",
+      "competition": "Serie A",
+      "home_team": "Atalanta BC",
+      "away_team": "Venezia FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "558587",
+      "date": "2026-10-12T18:45:00Z",
+      "competition": "Serie A",
+      "home_team": "Torino FC",
+      "away_team": "Udinese Calcio",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "564704",
+      "date": "2026-10-12T19:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Levante UD",
+      "away_team": "Sevilla FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    },
+    {
+      "fixture_id": "560597",
+      "date": "2026-10-12T19:00:00Z",
+      "competition": "Premier League",
+      "home_team": "Coventry City FC",
+      "away_team": "Newcastle United FC",
+      "probabilities": {
+        "home_win": 42.18,
+        "draw": 27.08,
+        "away_win": 30.73
+      },
+      "prediction": "HOME WIN",
+      "confidence": "LOW",
+      "model_version": "asta-v1-rating-baseline",
+      "validated_accuracy": null,
+      "status": "PENDING_RESULT"
+    }
+  ]
 }
