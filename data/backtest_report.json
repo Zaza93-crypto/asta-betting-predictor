@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-10-07T16:07:42.008539Z",
-  "model_version": "asta-v1-sequential-elo-backtest",
+  "generated_at": "2026-10-07T16:18:40.404982Z",
+  "model_version": "asta-v2-form-elo-poisson",
   "status": "BACKTESTED",
+  "baseline_comparison": {
+    "v1_accuracy": 0.4874,
+    "v1_matches_tested": 1752,
+    "comparison_note": "V2 should be compared on the same historical sample when possible."
+  },
   "metrics": {
     "matches_tested": 1752,
-    "correct_predictions": 854,
-    "accuracy": 0.4874,
-    "brier_score": 0.62261,
-    "multiclass_log_loss": 1.036155
+    "correct_predictions": 846,
+    "accuracy": 0.4829,
+    "brier_score": 0.624194,
+    "multiclass_log_loss": 1.037608
   },
   "by_competition": {
     "PD": {
@@ -17,417 +22,40 @@
     },
     "FL1": {
       "matches": 306,
-      "correct": 158,
-      "accuracy": 0.5163
+      "correct": 145,
+      "accuracy": 0.4739
     },
     "PL": {
       "matches": 380,
-      "correct": 178,
-      "accuracy": 0.4684
+      "correct": 172,
+      "accuracy": 0.4526
     },
     "BL1": {
       "matches": 306,
-      "correct": 153,
-      "accuracy": 0.5
+      "correct": 152,
+      "accuracy": 0.4967
     },
     "SA": {
       "matches": 380,
-      "correct": 176,
-      "accuracy": 0.4632
+      "correct": 188,
+      "accuracy": 0.4947
     }
   },
   "by_confidence": {
     "LOW_UNDER_55": {
-      "matches": 1679,
-      "correct": 797,
-      "accuracy": 0.4747
+      "matches": 1665,
+      "correct": 778,
+      "accuracy": 0.4673
     },
     "MEDIUM_55_64": {
-      "matches": 72,
-      "correct": 57,
-      "accuracy": 0.7917
+      "matches": 77,
+      "correct": 62,
+      "accuracy": 0.8052
     },
     "HIGH_65_PLUS": {
-      "matches": 1,
-      "correct": 0,
-      "accuracy": 0.0
+      "matches": 10,
+      "correct": 6,
+      "accuracy": 0.6
     }
-  },
-  "sample_predictions": [
-    {
-      "fixture_id": "544214",
-      "date": "2025-08-15T17:00:00Z",
-      "competition": "PD",
-      "home_team": "Girona FC",
-      "away_team": "Rayo Vallecano de Madrid",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "542414",
-      "date": "2025-08-15T18:45:00Z",
-      "competition": "FL1",
-      "home_team": "Stade Rennais FC 1901",
-      "away_team": "Olympique de Marseille",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "537785",
-      "date": "2025-08-15T19:00:00Z",
-      "competition": "PL",
-      "home_team": "Liverpool FC",
-      "away_team": "AFC Bournemouth",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "544220",
-      "date": "2025-08-15T19:30:00Z",
-      "competition": "PD",
-      "home_team": "Villarreal CF",
-      "away_team": "Real Oviedo",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "537786",
-      "date": "2025-08-16T11:30:00Z",
-      "competition": "PL",
-      "home_team": "Aston Villa FC",
-      "away_team": "Newcastle United FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "draw",
-      "correct": false
-    },
-    {
-      "fixture_id": "537787",
-      "date": "2025-08-16T14:00:00Z",
-      "competition": "PL",
-      "home_team": "Brighton & Hove Albion FC",
-      "away_team": "Fulham FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "draw",
-      "correct": false
-    },
-    {
-      "fixture_id": "537789",
-      "date": "2025-08-16T14:00:00Z",
-      "competition": "PL",
-      "home_team": "Sunderland AFC",
-      "away_team": "West Ham United FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "537790",
-      "date": "2025-08-16T14:00:00Z",
-      "competition": "PL",
-      "home_team": "Tottenham Hotspur FC",
-      "away_team": "Burnley FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "542411",
-      "date": "2025-08-16T15:00:00Z",
-      "competition": "FL1",
-      "home_team": "Racing Club de Lens",
-      "away_team": "Olympique Lyonnais",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "537791",
-      "date": "2025-08-16T16:30:00Z",
-      "competition": "PL",
-      "home_team": "Wolverhampton Wanderers FC",
-      "away_team": "Manchester City FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "542407",
-      "date": "2025-08-16T17:00:00Z",
-      "competition": "FL1",
-      "home_team": "AS Monaco FC",
-      "away_team": "Le Havre AC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "544216",
-      "date": "2025-08-16T17:30:00Z",
-      "competition": "PD",
-      "home_team": "RCD Mallorca",
-      "away_team": "FC Barcelona",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "542410",
-      "date": "2025-08-16T19:05:00Z",
-      "competition": "FL1",
-      "home_team": "OGC Nice",
-      "away_team": "Toulouse FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "544211",
-      "date": "2025-08-16T19:30:00Z",
-      "competition": "PD",
-      "home_team": "Deportivo Alavés",
-      "away_team": "Levante UD",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "544219",
-      "date": "2025-08-16T19:30:00Z",
-      "competition": "PD",
-      "home_team": "Valencia CF",
-      "away_team": "Real Sociedad de Fútbol",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "draw",
-      "correct": false
-    },
-    {
-      "fixture_id": "537788",
-      "date": "2025-08-17T13:00:00Z",
-      "competition": "PL",
-      "home_team": "Nottingham Forest FC",
-      "away_team": "Brentford FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "537792",
-      "date": "2025-08-17T13:00:00Z",
-      "competition": "PL",
-      "home_team": "Chelsea FC",
-      "away_team": "Crystal Palace FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "draw",
-      "correct": false
-    },
-    {
-      "fixture_id": "542413",
-      "date": "2025-08-17T13:00:00Z",
-      "competition": "FL1",
-      "home_team": "Stade Brestois 29",
-      "away_team": "Lille OSC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "draw",
-      "correct": false
-    },
-    {
-      "fixture_id": "544213",
-      "date": "2025-08-17T15:00:00Z",
-      "competition": "PD",
-      "home_team": "RC Celta de Vigo",
-      "away_team": "Getafe CF",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "542406",
-      "date": "2025-08-17T15:15:00Z",
-      "competition": "FL1",
-      "home_team": "AJ Auxerre",
-      "away_team": "FC Lorient",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "542408",
-      "date": "2025-08-17T15:15:00Z",
-      "competition": "FL1",
-      "home_team": "FC Metz",
-      "away_team": "RC Strasbourg Alsace",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "542412",
-      "date": "2025-08-17T15:15:00Z",
-      "competition": "FL1",
-      "home_team": "Angers SCO",
-      "away_team": "Paris FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "537793",
-      "date": "2025-08-17T15:30:00Z",
-      "competition": "PL",
-      "home_team": "Manchester United FC",
-      "away_team": "Arsenal FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    },
-    {
-      "fixture_id": "544212",
-      "date": "2025-08-17T17:30:00Z",
-      "competition": "PD",
-      "home_team": "Athletic Club",
-      "away_team": "Sevilla FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "home_win",
-      "correct": true
-    },
-    {
-      "fixture_id": "542409",
-      "date": "2025-08-17T18:45:00Z",
-      "competition": "FL1",
-      "home_team": "FC Nantes",
-      "away_team": "Paris Saint-Germain FC",
-      "probabilities": {
-        "home_win": 42.18,
-        "draw": 27.08,
-        "away_win": 30.73
-      },
-      "prediction": "home_win",
-      "actual_result": "away_win",
-      "correct": false
-    }
-  ]
+  }
 }
