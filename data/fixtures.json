@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-07T14:58:25Z",
+  "updated": "2026-10-07T15:22:11Z",
   "date_range": {
     "from": "2026-10-07",
     "to": "2026-10-14"
@@ -150,17 +150,6 @@
       "confidence": null
     },
     {
-      "id": 560592,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-10-10T14:00:00Z",
-      "status": "TIMED",
-      "home": "Sunderland AFC",
-      "away": "Brighton & Hove Albion FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560601,
       "league": "Premier League",
       "competition_code": "PL",
@@ -168,6 +157,17 @@
       "status": "TIMED",
       "home": "Aston Villa FC",
       "away": "Brentford FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560592,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-10-10T14:00:00Z",
+      "status": "TIMED",
+      "home": "Sunderland AFC",
+      "away": "Brighton & Hove Albion FC",
       "pick": "Model pending",
       "confidence": null
     },
