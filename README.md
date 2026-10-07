@@ -1,34 +1,38 @@
-# Asta Football Predictor — Prediction Engine v1
+# Asta V3 FINAL
 
-## What this adds
+This is the final planned model version.
 
-- Reads the live fixture file created by `scripts/fetch_data.py`
-- Produces Home/Draw/Away probabilities
-- Applies HIGH/MEDIUM/LOW confidence labels
-- Writes results to `data/predictions.json`
-- Clearly marks the model as **NOT VALIDATED**
-- Provides a starter workflow for automatic fixture fetching and prediction generation
+## Method
+V3 uses an expanding-window, walk-forward multiclass logistic regression.
 
-## Important
+For every historical match:
+1. Build features using only matches completed before that match.
+2. Train on earlier observations only.
+3. Predict the current match.
+4. Score the prediction.
+5. Only then add the current match to the historical state.
 
-This is a baseline model, not a proven 85% or 93% accurate system. The next development phase is historical back-testing using actual past results. Only then should accuracy, calibration, or profitability claims be made.
+Features include:
+- Elo difference
+- home advantage
+- rolling 5/10-match points
+- rolling 5/10-match goals for/against and goal difference
+- home/away rolling performance
+- team experience count
 
-## Files
+Regularization and class balancing are used to reduce overfitting.
 
-- `scripts/predict.py` — prediction engine
-- `data/team_ratings.json` — starting team ratings; replace with validated ratings/statistics
-- `data/predictions.json` — generated prediction output
-- `.github/workflows/asta-predictor.yml` — example automation workflow
+## Existing benchmarks
+V1: 48.74% accuracy on 1,752 matches.
+V2: 48.29% accuracy on 1,752 matches.
 
-## Run locally
+V3 must be judged by its own chronological out-of-sample report. No target accuracy is guaranteed.
 
-```bash
-python scripts/predict.py
-```
+## Final-version rule
+Do not create V4 merely to chase a higher historical score. Future changes should be limited to:
+- fixing bugs,
+- correcting data problems,
+- improving data quality,
+- or adding genuinely new information with a separately documented validation test.
 
-If your existing workflow already fetches fixtures, add the prediction step immediately after the fetch step:
-
-```yaml
-- name: Generate predictions
-  run: python scripts/predict.py
-```
+Historical backtest performance does not guarantee future accuracy or profitability.
