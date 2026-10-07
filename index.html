@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asta Betting Predictor - football predictions, confidence estimates and results tracking.">
+  <title>Asta Betting Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">A</div>
+      <div>
+        <strong>ASTA</strong>
+        <span>BETTING PREDICTOR</span>
+      </div>
+    </div>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#picks">Today's Picks</a>
+      <a href="#matches">Matches</a>
+      <a href="#results">Results</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FOOTBALL ANALYTICS</p>
+        <h1>Make smarter picks.<br><span>Track the evidence.</span></h1>
+        <p class="hero-text">Football prediction estimates built for analysis—not guaranteed wins. Every result should be tracked against what the model predicted.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#picks">View Today's Picks</a>
+          <a class="btn secondary" href="#results">View Performance</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-head"><span>MODEL STATUS</span><b>V1 DEMO</b></div>
+        <div class="confidence">72<span>%</span></div>
+        <p>Example confidence</p>
+        <div class="meter"><i></i></div>
+        <small>Confidence is an estimate, not a guarantee.</small>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="statPicks">12</strong><span>Picks tracked</span></div>
+      <div><strong id="statCorrect">8</strong><span>Correct</span></div>
+      <div><strong id="statAccuracy">66.7%</strong><span>Recorded accuracy</span></div>
+      <div><strong>V1</strong><span>Model version</span></div>
+    </section>
+
+    <section id="picks" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">FEATURED</p><h2>Today's Picks</h2></div>
+        <span class="demo-tag">DEMO DATA</span>
+      </div>
+      <div id="picksGrid" class="cards"></div>
+    </section>
+
+    <section id="matches" class="section alt">
+      <div class="section-head">
+        <div><p class="eyebrow">UPCOMING</p><h2>Match Centre</h2></div>
+        <button id="filterBtn" class="filter-btn">All Matches</button>
+      </div>
+      <div id="matchesGrid" class="match-list"></div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">TRANSPARENCY</p><h2>Performance Tracker</h2></div>
+      </div>
+      <div class="performance">
+        <div class="performance-main">
+          <span>Recorded accuracy</span>
+          <strong>66.7%</strong>
+          <p>8 correct from 12 tracked demo picks.</p>
+        </div>
+        <div class="bar"><i style="width:66.7%"></i></div>
+      </div>
+      <p class="notice"><strong>Important:</strong> This V1 uses demonstration data. Real accuracy must be calculated from real predictions and verified match results. No prediction is guaranteed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>ASTA BETTING PREDICTOR</strong><p>Football analytics & prediction tracking.</p></div>
+    <p>© 2026 Asta. Analysis only.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
