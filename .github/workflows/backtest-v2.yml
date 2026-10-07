@@ -1,0 +1,30 @@
+name: Asta V2 Backtest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run V2 chronological backtest
+        run: python scripts/backtest.py
+
+      - name: Commit V2 report
+        run: |
+          git config user.name "asta-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/backtest_report.json
+          git diff --cached --quiet || git commit -m "Backtest Asta v2"
+          git push
