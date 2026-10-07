@@ -21,7 +21,7 @@ jobs:
 
       - name: Fetch fixtures and predictions
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_API_TOKEN: ${{ secrets.FOOTBALL_DATA_API_TOKEN }}
         run: python scripts/fetch_data.py
 
       - name: Commit updated data
