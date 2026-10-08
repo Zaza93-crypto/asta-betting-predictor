@@ -5,12 +5,20 @@ on:
   schedule:
     - cron: "17 */6 * * *"
 
+# Prevent overlapping X scans
+concurrency:
+  group: asta-v3-x-tipster-scan
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   scan-x-tipsters:
     runs-on: ubuntu-latest
+
+    timeout-minutes: 5
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,15 +28,52 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check scanner files
+        run: |
+          test -f scripts/x_tipster_scanner.py
+          test -f data/fixtures.json
+          echo "Asta V3 X scanner files found."
+
       - name: Scan public X posts
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-        run: python scripts/x_tipster_scanner.py
+        run: |
+          python scripts/x_tipster_scanner.py
+
+      - name: Show scanner status
+        run: |
+          python - <<'PY'
+          import json
+
+          path = "data/tipster_predictions.json"
+
+          try:
+              with open(path, "r", encoding="utf-8") as f:
+                  data = json.load(f)
+
+              print("X scan status:",
+                    data.get("scan_status", "UNKNOWN"))
+
+              print("Maximum posts per scan:",
+                    data.get("max_results_per_scan", "UNKNOWN"))
+
+              print("Stored tips:",
+                    len(data.get("tips", [])))
+
+          except Exception as e:
+              print("Could not read scanner status:", e)
+          PY
 
       - name: Commit tipster data
         run: |
           git config user.name "Asta V3 Bot"
           git config user.email "actions@github.com"
-          git add data/tipster_predictions.json data/tipsters.json
-          git diff --cached --quiet || git commit -m "Update X tipster intelligence"
-          git push
+
+          git add             data/tipster_predictions.json             data/tipsters.json
+
+          if git diff --cached --quiet; then
+            echo "No tipster data changes to commit."
+          else
+            git commit -m "Update X tipster intelligence"
+            git push
+          fi
