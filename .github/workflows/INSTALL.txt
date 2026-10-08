@@ -1,0 +1,18 @@
+ASTA V3 RESULT TRACKING
+
+Upload this file to:
+.github/workflows/track-results.yml
+
+The repository already contains:
+- scripts/track_results.py
+- data/prediction_history.json
+- the V3 dashboard files
+
+After uploading:
+1. Open GitHub Actions.
+2. Open "Track Asta V3 results".
+3. Run it manually once.
+4. If successful, it will also run every 6 hours.
+5. It resolves predictions only when completed results exist in historical_matches.json.
+
+Do not create V4.

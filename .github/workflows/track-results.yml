@@ -1,0 +1,37 @@
+name: Track Asta V3 results
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  track-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve completed predictions
+        run: python scripts/track_results.py
+
+      - name: Commit verified results
+        run: |
+          git config user.name "asta-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add data/predictions.json
+          git add data/prediction_history.json
+
+          git diff --cached --quiet || git commit -m "Update Asta V3 result tracking"
+
+          git push
