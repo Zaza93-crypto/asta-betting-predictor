@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Asta Betting Predictor - football predictions and transparent performance tracking">
-<title>Asta Betting Predictor</title><link rel="stylesheet" href="style.css">
+<meta name="description" content="Asta V3 Football Predictor - confidence-filtered predictions and transparent performance tracking">
+<title>Asta V3 Football Predictor</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="#"><span class="logo">A</span><span><b>ASTA</b><small>BETTING PREDICTOR</small></span></a>
-<button class="menu-btn">☰</button><nav><a href="#home">Home</a><a href="#picks">Today's Picks</a><a href="#matches">Matches</a><a href="#performance">Performance</a></nav></header>
+<header class="topbar"><a class="brand" href="#"><span class="logo">A</span><span><b>ASTA</b><small>V3 FOOTBALL PREDICTOR</small></span></a>
+<button class="menu-btn">☰</button><nav><a href="#home">Home</a><a href="#picks">High Confidence</a><a href="#matches">Matches</a><a href="#performance">Performance</a></nav></header>
 <main>
-<section id="home" class="hero"><div><p class="eyebrow">FOOTBALL ANALYTICS · V2</p><h1>Real fixtures.<br><span>Measured predictions.</span></h1>
-<p>Live fixture data is combined with prediction probabilities and tracked against actual results. No prediction is guaranteed.</p>
-<div class="actions"><a class="btn primary" href="#picks">See Picks</a><a class="btn secondary" href="#performance">Check Accuracy</a></div></div>
-<div class="status-card"><div class="status-row"><span>DATA STATUS</span><b id="dataStatus">LOADING</b></div><strong id="liveCount">—</strong><span>upcoming fixtures</span><div class="pulse"></div><small id="updated">Waiting for data…</small></div></section>
+<section id="home" class="hero"><div><p class="eyebrow">FOOTBALL ANALYTICS · V3</p><h1>Filtered picks.<br><span>Measured results.</span></h1>
+<p>V3 separates high-confidence candidates from watch and skip predictions, then tracks every recorded result. No prediction is guaranteed.</p>
+<div class="actions"><a class="btn primary" href="#picks">See Picks</a><a class="btn secondary" href="#performance">Check Performance</a></div></div>
+<div class="status-card"><div class="status-row"><span>MODEL STATUS</span><b id="dataStatus">LOADING</b></div><strong id="liveCount">—</strong><span>current predictions</span><div class="pulse"></div><small id="updated">Waiting for data…</small></div></section>
 
-<section class="stats"><div><b id="pickCount">0</b><span>Picks tracked</span></div><div><b id="correctCount">0</b><span>Correct</span></div><div><b id="accuracy">—</b><span>Verified accuracy</span></div><div><b id="modelVersion">V2</b><span>Model version</span></div></section>
+<section class="stats"><div><b id="pickCount">0</b><span>Verified predictions</span></div><div><b id="correctCount">0</b><span>Correct</span></div><div><b id="accuracy">—</b><span>Live verified accuracy</span></div><div><b id="modelVersion">V3</b><span>Model version</span></div></section>
 
-<section id="picks" class="section"><div class="heading"><div><p class="eyebrow">FILTERED PICKS</p><h2>Today's Picks</h2></div><span class="tag">LIVE DATA</span></div><div id="picksGrid" class="cards"><div class="loading">Loading fixtures…</div></div></section>
+<section id="picks" class="section"><div class="heading"><div><p class="eyebrow">CONFIDENCE FILTER</p><h2>High Confidence Picks</h2></div><span class="tag">≥65%</span></div><div id="picksGrid" class="cards"><div class="loading">Loading predictions…</div></div></section>
 
-<section id="matches" class="section alt"><div class="heading"><div><p class="eyebrow">MATCH CENTRE</p><h2>Upcoming Matches</h2></div></div><div id="matchesGrid" class="match-list"></div></section>
+<section id="matches" class="section alt"><div class="heading"><div><p class="eyebrow">DECISION LAYER</p><h2>All Current Predictions</h2></div></div><div id="matchesGrid" class="match-list"></div></section>
 
-<section id="performance" class="section"><div class="heading"><div><p class="eyebrow">TRANSPARENCY</p><h2>Performance</h2></div></div>
-<div class="performance"><div><span>Verified accuracy</span><strong id="performanceAccuracy">—</strong><p id="performanceText">No verified historical predictions yet.</p></div><div class="bar"><i id="accuracyBar"></i></div></div>
-<div class="notice"><b>Important:</b> Confidence is a model estimate, not a guarantee of winning. Historical accuracy is calculated only from recorded predictions whose matches have finished.</div></section>
+<section id="performance" class="section"><div class="heading"><div><p class="eyebrow">TRANSPARENCY</p><h2>V3 Performance</h2></div></div>
+<div class="performance"><div><span>Live verified accuracy</span><strong id="performanceAccuracy">—</strong><p id="performanceText">No verified live predictions yet.</p></div><div class="bar"><i id="accuracyBar"></i></div></div>
+<div class="band-grid">
+  <div class="band"><b>HIGH ≥65%</b><strong id="highAccuracy">—</strong><span><i id="highMatches">0</i> verified · <i id="highDecision">0</i> current picks</span></div>
+  <div class="band"><b>MEDIUM 55–64.99%</b><strong id="mediumAccuracy">—</strong><span><i id="mediumMatches">0</i> verified · <i id="watchDecision">0</i> current watch</span></div>
+  <div class="band"><b>LOW &lt;55%</b><strong id="lowAccuracy">—</strong><span><i id="lowMatches">0</i> verified · <i id="skipDecision">0</i> current skip</span></div>
+</div>
+<div class="notice"><b>Important:</b> Confidence is a model estimate, not a guarantee. Historical backtest accuracy and live verified accuracy are kept separate. A confidence band must earn its reputation from verified results.</div></section>
 </main>
-<footer><div><b>ASTA BETTING PREDICTOR</b><p>Analytics and prediction tracking.</p></div><p>© 2026 Asta · Analysis only</p></footer>
+<footer><div><b>ASTA V3 FOOTBALL PREDICTOR</b><p>Analytics, filtering and result tracking.</p></div><p>© 2026 Asta · Analysis only</p></footer>
 <script src="script.js"></script>
 </body></html>

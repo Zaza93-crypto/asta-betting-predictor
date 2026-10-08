@@ -1,0 +1,28 @@
+ASTA V3 FINAL - NEXT STAGE
+
+Replace these files in the repository:
+  scripts/predict.py
+  scripts/track_results.py   (new)
+  index.html
+  script.js
+  style.css
+
+Keep your existing data files, especially:
+  data/historical_matches.json
+  data/fixtures.json
+  data/backtest_report.json
+
+The predictor creates/updates:
+  data/predictions.json
+  data/prediction_history.json
+
+Run:
+  python scripts/predict.py
+  python scripts/track_results.py
+
+Decision layer:
+  >= 65%   BET_CANDIDATE / HIGH
+  55-64.99 WATCH / MEDIUM
+  < 55%    SKIP / LOW
+
+Accuracy is only reported for VERIFIED results. The 73% historical high-confidence figure remains a backtest result, not a guarantee.
