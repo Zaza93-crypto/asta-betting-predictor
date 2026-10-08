@@ -1,0 +1,34 @@
+name: Scan X Tipsters
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scan-x-tipsters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan public X posts
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: python scripts/x_tipster_scanner.py
+
+      - name: Commit tipster data
+        run: |
+          git config user.name "Asta V3 Bot"
+          git config user.email "actions@github.com"
+          git add data/tipster_predictions.json data/tipsters.json
+          git diff --cached --quiet || git commit -m "Update X tipster intelligence"
+          git push
