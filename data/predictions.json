@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T06:34:05.164656+00:00",
+  "generated_at": "2026-10-10T06:49:36.336501+00:00",
   "model_version": "asta-v3-final-walkforward-logistic",
   "accuracy_status": "LIVE_TRACKING",
   "accuracy_note": "Live accuracy is reported only after prediction results are verified. Historical backtest metrics remain separate.",
@@ -32,6 +32,81 @@
     }
   },
   "predictions": [
+    {
+      "fixture_id": "565820",
+      "date": "2026-10-09T18:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "Borussia Dortmund",
+      "away_team": "SV Werder Bremen",
+      "probabilities": {
+        "home_win": 69.48,
+        "draw": 20.96,
+        "away_win": 9.56
+      },
+      "prediction": "HOME WIN",
+      "confidence_percent": 69.48,
+      "confidence_band": "HIGH_65_PLUS",
+      "decision": "BET_CANDIDATE",
+      "eligible_for_primary_picks": true,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-09T18:32:14.376692+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
+      "fixture_id": "559669",
+      "date": "2026-10-09T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Racing Club de Lens",
+      "away_team": "Olympique Lyonnais",
+      "probabilities": {
+        "home_win": 42.8,
+        "draw": 34.55,
+        "away_win": 22.64
+      },
+      "prediction": "HOME WIN",
+      "confidence_percent": 42.8,
+      "confidence_band": "LOW_UNDER_55",
+      "decision": "SKIP",
+      "eligible_for_primary_picks": false,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-09T18:32:14.376692+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
+      "fixture_id": "564706",
+      "date": "2026-10-09T19:00:00Z",
+      "competition": "La Liga",
+      "home_team": "Málaga CF",
+      "away_team": "RCD Espanyol de Barcelona",
+      "probabilities": {
+        "home_win": 43.41,
+        "draw": 33.74,
+        "away_win": 22.85
+      },
+      "prediction": "HOME WIN",
+      "confidence_percent": 43.41,
+      "confidence_band": "LOW_UNDER_55",
+      "decision": "SKIP",
+      "eligible_for_primary_picks": false,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-09T18:32:14.376692+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
     {
       "fixture_id": "560593",
       "date": "2026-10-10T11:30:00Z",
@@ -108,18 +183,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "565817",
+      "fixture_id": "565812",
       "date": "2026-10-10T13:30:00Z",
       "competition": "Bundesliga",
-      "home_team": "1. FC Union Berlin",
-      "away_team": "SV 07 Elversberg",
+      "home_team": "1. FSV Mainz 05",
+      "away_team": "Bayer 04 Leverkusen",
       "probabilities": {
-        "home_win": 28.36,
-        "draw": 31.84,
-        "away_win": 39.8
+        "home_win": 20.82,
+        "draw": 33.11,
+        "away_win": 46.06
       },
       "prediction": "AWAY WIN",
-      "confidence_percent": 39.8,
+      "confidence_percent": 46.06,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -158,43 +233,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "565819",
+      "fixture_id": "565817",
       "date": "2026-10-10T13:30:00Z",
       "competition": "Bundesliga",
-      "home_team": "FC Augsburg",
-      "away_team": "FC Bayern München",
+      "home_team": "1. FC Union Berlin",
+      "away_team": "SV 07 Elversberg",
       "probabilities": {
-        "home_win": 6.32,
-        "draw": 25.32,
-        "away_win": 68.36
+        "home_win": 28.36,
+        "draw": 31.84,
+        "away_win": 39.8
       },
       "prediction": "AWAY WIN",
-      "confidence_percent": 68.36,
-      "confidence_band": "HIGH_65_PLUS",
-      "decision": "BET_CANDIDATE",
-      "eligible_for_primary_picks": true,
-      "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-10-10T06:34:05.164656+00:00",
-      "result_status": "PENDING_RESULT",
-      "actual_result": null,
-      "actual_home_goals": null,
-      "actual_away_goals": null,
-      "correct": null,
-      "resolved_at": null
-    },
-    {
-      "fixture_id": "565812",
-      "date": "2026-10-10T13:30:00Z",
-      "competition": "Bundesliga",
-      "home_team": "1. FSV Mainz 05",
-      "away_team": "Bayer 04 Leverkusen",
-      "probabilities": {
-        "home_win": 20.82,
-        "draw": 33.11,
-        "away_win": 46.06
-      },
-      "prediction": "AWAY WIN",
-      "confidence_percent": 46.06,
+      "confidence_percent": 39.8,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -233,18 +283,43 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "560601",
+      "fixture_id": "565819",
+      "date": "2026-10-10T13:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "FC Augsburg",
+      "away_team": "FC Bayern München",
+      "probabilities": {
+        "home_win": 6.32,
+        "draw": 25.32,
+        "away_win": 68.36
+      },
+      "prediction": "AWAY WIN",
+      "confidence_percent": 68.36,
+      "confidence_band": "HIGH_65_PLUS",
+      "decision": "BET_CANDIDATE",
+      "eligible_for_primary_picks": true,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-10T06:34:05.164656+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
+      "fixture_id": "560592",
       "date": "2026-10-10T14:00:00Z",
       "competition": "Premier League",
-      "home_team": "Aston Villa FC",
-      "away_team": "Brentford FC",
+      "home_team": "Sunderland AFC",
+      "away_team": "Brighton & Hove Albion FC",
       "probabilities": {
-        "home_win": 34.87,
-        "draw": 34.68,
-        "away_win": 30.45
+        "home_win": 26.77,
+        "draw": 43.46,
+        "away_win": 29.77
       },
-      "prediction": "HOME WIN",
-      "confidence_percent": 34.87,
+      "prediction": "DRAW",
+      "confidence_percent": 43.46,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -308,18 +383,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "560592",
+      "fixture_id": "560601",
       "date": "2026-10-10T14:00:00Z",
       "competition": "Premier League",
-      "home_team": "Sunderland AFC",
-      "away_team": "Brighton & Hove Albion FC",
+      "home_team": "Aston Villa FC",
+      "away_team": "Brentford FC",
       "probabilities": {
-        "home_win": 26.77,
-        "draw": 43.46,
-        "away_win": 29.77
+        "home_win": 34.87,
+        "draw": 34.68,
+        "away_win": 30.45
       },
-      "prediction": "DRAW",
-      "confidence_percent": 43.46,
+      "prediction": "HOME WIN",
+      "confidence_percent": 34.87,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -408,31 +483,6 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "565815",
-      "date": "2026-10-10T16:30:00Z",
-      "competition": "Bundesliga",
-      "home_team": "RB Leipzig",
-      "away_team": "Eintracht Frankfurt",
-      "probabilities": {
-        "home_win": 50.28,
-        "draw": 28.82,
-        "away_win": 20.91
-      },
-      "prediction": "HOME WIN",
-      "confidence_percent": 50.28,
-      "confidence_band": "LOW_UNDER_55",
-      "decision": "SKIP",
-      "eligible_for_primary_picks": false,
-      "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-10-10T06:34:05.164656+00:00",
-      "result_status": "PENDING_RESULT",
-      "actual_result": null,
-      "actual_home_goals": null,
-      "actual_away_goals": null,
-      "correct": null,
-      "resolved_at": null
-    },
-    {
       "fixture_id": "560600",
       "date": "2026-10-10T16:30:00Z",
       "competition": "Premier League",
@@ -483,68 +533,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "559666",
-      "date": "2026-10-10T18:45:00Z",
-      "competition": "Ligue 1",
-      "home_team": "Stade Brestois 29",
-      "away_team": "Angers SCO",
+      "fixture_id": "565815",
+      "date": "2026-10-10T16:30:00Z",
+      "competition": "Bundesliga",
+      "home_team": "RB Leipzig",
+      "away_team": "Eintracht Frankfurt",
       "probabilities": {
-        "home_win": 33.37,
-        "draw": 34.29,
-        "away_win": 32.34
-      },
-      "prediction": "DRAW",
-      "confidence_percent": 34.29,
-      "confidence_band": "LOW_UNDER_55",
-      "decision": "SKIP",
-      "eligible_for_primary_picks": false,
-      "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-10-10T06:34:05.164656+00:00",
-      "result_status": "PENDING_RESULT",
-      "actual_result": null,
-      "actual_home_goals": null,
-      "actual_away_goals": null,
-      "correct": null,
-      "resolved_at": null
-    },
-    {
-      "fixture_id": "559673",
-      "date": "2026-10-10T18:45:00Z",
-      "competition": "Ligue 1",
-      "home_team": "AS Monaco FC",
-      "away_team": "Toulouse FC",
-      "probabilities": {
-        "home_win": 44.14,
-        "draw": 33.42,
-        "away_win": 22.43
+        "home_win": 50.28,
+        "draw": 28.82,
+        "away_win": 20.91
       },
       "prediction": "HOME WIN",
-      "confidence_percent": 44.14,
-      "confidence_band": "LOW_UNDER_55",
-      "decision": "SKIP",
-      "eligible_for_primary_picks": false,
-      "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-10-10T06:34:05.164656+00:00",
-      "result_status": "PENDING_RESULT",
-      "actual_result": null,
-      "actual_home_goals": null,
-      "actual_away_goals": null,
-      "correct": null,
-      "resolved_at": null
-    },
-    {
-      "fixture_id": "559668",
-      "date": "2026-10-10T18:45:00Z",
-      "competition": "Ligue 1",
-      "home_team": "FC Lorient",
-      "away_team": "Paris FC",
-      "probabilities": {
-        "home_win": 28.62,
-        "draw": 32.75,
-        "away_win": 38.63
-      },
-      "prediction": "AWAY WIN",
-      "confidence_percent": 38.63,
+      "confidence_percent": 50.28,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -583,6 +583,56 @@
       "resolved_at": null
     },
     {
+      "fixture_id": "559666",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "Stade Brestois 29",
+      "away_team": "Angers SCO",
+      "probabilities": {
+        "home_win": 33.37,
+        "draw": 34.29,
+        "away_win": 32.34
+      },
+      "prediction": "DRAW",
+      "confidence_percent": 34.29,
+      "confidence_band": "LOW_UNDER_55",
+      "decision": "SKIP",
+      "eligible_for_primary_picks": false,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-10T06:34:05.164656+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
+      "fixture_id": "559668",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "FC Lorient",
+      "away_team": "Paris FC",
+      "probabilities": {
+        "home_win": 28.62,
+        "draw": 32.75,
+        "away_win": 38.63
+      },
+      "prediction": "AWAY WIN",
+      "confidence_percent": 38.63,
+      "confidence_band": "LOW_UNDER_55",
+      "decision": "SKIP",
+      "eligible_for_primary_picks": false,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-10T06:34:05.164656+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
       "fixture_id": "559672",
       "date": "2026-10-10T18:45:00Z",
       "competition": "Ligue 1",
@@ -597,6 +647,31 @@
       "confidence_percent": 59.36,
       "confidence_band": "MEDIUM_55_64",
       "decision": "WATCH",
+      "eligible_for_primary_picks": false,
+      "model_version": "asta-v3-final-walkforward-logistic",
+      "generated_at": "2026-10-10T06:34:05.164656+00:00",
+      "result_status": "PENDING_RESULT",
+      "actual_result": null,
+      "actual_home_goals": null,
+      "actual_away_goals": null,
+      "correct": null,
+      "resolved_at": null
+    },
+    {
+      "fixture_id": "559673",
+      "date": "2026-10-10T18:45:00Z",
+      "competition": "Ligue 1",
+      "home_team": "AS Monaco FC",
+      "away_team": "Toulouse FC",
+      "probabilities": {
+        "home_win": 44.14,
+        "draw": 33.42,
+        "away_win": 22.43
+      },
+      "prediction": "HOME WIN",
+      "confidence_percent": 44.14,
+      "confidence_band": "LOW_UNDER_55",
+      "decision": "SKIP",
       "eligible_for_primary_picks": false,
       "model_version": "asta-v3-final-walkforward-logistic",
       "generated_at": "2026-10-10T06:34:05.164656+00:00",
@@ -758,18 +833,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "560596",
+      "fixture_id": "560594",
       "date": "2026-10-11T13:00:00Z",
       "competition": "Premier League",
-      "home_team": "Crystal Palace FC",
-      "away_team": "Nottingham Forest FC",
+      "home_team": "Hull City AFC",
+      "away_team": "Everton FC",
       "probabilities": {
-        "home_win": 24.19,
-        "draw": 33.75,
-        "away_win": 42.06
+        "home_win": 32.86,
+        "draw": 37.63,
+        "away_win": 29.51
       },
-      "prediction": "AWAY WIN",
-      "confidence_percent": 42.06,
+      "prediction": "DRAW",
+      "confidence_percent": 37.63,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -783,18 +858,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "560594",
+      "fixture_id": "560596",
       "date": "2026-10-11T13:00:00Z",
       "competition": "Premier League",
-      "home_team": "Hull City AFC",
-      "away_team": "Everton FC",
+      "home_team": "Crystal Palace FC",
+      "away_team": "Nottingham Forest FC",
       "probabilities": {
-        "home_win": 32.86,
-        "draw": 37.63,
-        "away_win": 29.51
+        "home_win": 24.19,
+        "draw": 33.75,
+        "away_win": 42.06
       },
-      "prediction": "DRAW",
-      "confidence_percent": 37.63,
+      "prediction": "AWAY WIN",
+      "confidence_percent": 42.06,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -883,18 +958,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "565816",
+      "fixture_id": "560598",
       "date": "2026-10-11T15:30:00Z",
-      "competition": "Bundesliga",
-      "home_team": "SC Freiburg",
-      "away_team": "FC Schalke 04",
+      "competition": "Premier League",
+      "home_team": "Liverpool FC",
+      "away_team": "Manchester City FC",
       "probabilities": {
-        "home_win": 36.75,
-        "draw": 30.03,
-        "away_win": 33.22
+        "home_win": 19.3,
+        "draw": 32.07,
+        "away_win": 48.63
       },
-      "prediction": "HOME WIN",
-      "confidence_percent": 36.75,
+      "prediction": "AWAY WIN",
+      "confidence_percent": 48.63,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -908,18 +983,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "560598",
+      "fixture_id": "565816",
       "date": "2026-10-11T15:30:00Z",
-      "competition": "Premier League",
-      "home_team": "Liverpool FC",
-      "away_team": "Manchester City FC",
+      "competition": "Bundesliga",
+      "home_team": "SC Freiburg",
+      "away_team": "FC Schalke 04",
       "probabilities": {
-        "home_win": 19.3,
-        "draw": 32.07,
-        "away_win": 48.63
+        "home_win": 36.75,
+        "draw": 30.03,
+        "away_win": 33.22
       },
-      "prediction": "AWAY WIN",
-      "confidence_percent": 48.63,
+      "prediction": "HOME WIN",
+      "confidence_percent": 36.75,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -983,18 +1058,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "559671",
+      "fixture_id": "558584",
       "date": "2026-10-11T18:45:00Z",
-      "competition": "Ligue 1",
-      "home_team": "ES Troyes AC",
-      "away_team": "Olympique de Marseille",
+      "competition": "Serie A",
+      "home_team": "Cagliari Calcio",
+      "away_team": "Juventus FC",
       "probabilities": {
-        "home_win": 29.98,
-        "draw": 35.76,
-        "away_win": 34.26
+        "home_win": 15.53,
+        "draw": 38.98,
+        "away_win": 45.49
       },
-      "prediction": "DRAW",
-      "confidence_percent": 35.76,
+      "prediction": "AWAY WIN",
+      "confidence_percent": 45.49,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -1008,18 +1083,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "558584",
+      "fixture_id": "559671",
       "date": "2026-10-11T18:45:00Z",
-      "competition": "Serie A",
-      "home_team": "Cagliari Calcio",
-      "away_team": "Juventus FC",
+      "competition": "Ligue 1",
+      "home_team": "ES Troyes AC",
+      "away_team": "Olympique de Marseille",
       "probabilities": {
-        "home_win": 15.53,
-        "draw": 38.98,
-        "away_win": 45.49
+        "home_win": 29.98,
+        "draw": 35.76,
+        "away_win": 34.26
       },
-      "prediction": "AWAY WIN",
-      "confidence_percent": 45.49,
+      "prediction": "DRAW",
+      "confidence_percent": 35.76,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -1183,18 +1258,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "559661",
+      "fixture_id": "558573",
       "date": "2026-10-16T18:45:00Z",
-      "competition": "Ligue 1",
-      "home_team": "Le Mans FC",
-      "away_team": "Toulouse FC",
+      "competition": "Serie A",
+      "home_team": "Frosinone Calcio",
+      "away_team": "US Sassuolo Calcio",
       "probabilities": {
-        "home_win": 37.02,
-        "draw": 34.95,
-        "away_win": 28.03
+        "home_win": 36.58,
+        "draw": 33.58,
+        "away_win": 29.84
       },
       "prediction": "HOME WIN",
-      "confidence_percent": 37.02,
+      "confidence_percent": 36.58,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
@@ -1208,18 +1283,18 @@
       "resolved_at": null
     },
     {
-      "fixture_id": "558573",
+      "fixture_id": "559661",
       "date": "2026-10-16T18:45:00Z",
-      "competition": "Serie A",
-      "home_team": "Frosinone Calcio",
-      "away_team": "US Sassuolo Calcio",
+      "competition": "Ligue 1",
+      "home_team": "Le Mans FC",
+      "away_team": "Toulouse FC",
       "probabilities": {
-        "home_win": 36.58,
-        "draw": 33.58,
-        "away_win": 29.84
+        "home_win": 37.02,
+        "draw": 34.95,
+        "away_win": 28.03
       },
       "prediction": "HOME WIN",
-      "confidence_percent": 36.58,
+      "confidence_percent": 37.02,
       "confidence_band": "LOW_UNDER_55",
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
