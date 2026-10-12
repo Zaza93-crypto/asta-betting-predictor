@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T06:57:43.866385+00:00",
+  "generated_at": "2026-10-12T13:11:19.150477+00:00",
   "model_version": "asta-v3-final-walkforward-logistic",
   "accuracy_status": "LIVE_TRACKING",
   "accuracy_note": "Live accuracy is reported only after prediction results are verified. Historical backtest metrics remain separate.",
