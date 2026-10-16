@@ -1,6 +1,6 @@
 {
   "model_version": "asta-v3-final-walkforward-logistic",
-  "updated_at": "2026-10-16T06:52:50.011488+00:00",
+  "updated_at": "2026-10-16T07:13:32.513808+00:00",
   "predictions": [
     {
       "fixture_id": "565820",
@@ -2427,5 +2427,27 @@
       "correct": null,
       "resolved_at": null
     }
-  ]
+  ],
+  "performance": {
+    "tracked": 0,
+    "correct": 0,
+    "accuracy": null,
+    "confidence_bands": {
+      "HIGH_65_PLUS": {
+        "matches": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "MEDIUM_55_64": {
+        "matches": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "LOW_UNDER_55": {
+        "matches": 0,
+        "correct": 0,
+        "accuracy": null
+      }
+    }
+  }
 }
