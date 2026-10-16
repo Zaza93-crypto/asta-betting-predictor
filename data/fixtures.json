@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-16T12:52:51Z",
+  "updated": "2026-10-16T18:47:19Z",
   "date_range": {
     "from": "2026-10-16",
     "to": "2026-10-23"
@@ -20,7 +20,7 @@
     },
     "Bundesliga": {
       "competition_code": "BL1",
-      "upcoming_fixtures": 9
+      "upcoming_fixtures": 8
     },
     "Ligue 1": {
       "competition_code": "FL1",
@@ -28,17 +28,6 @@
     }
   },
   "matches": [
-    {
-      "id": 565828,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-10-16T18:30:00Z",
-      "status": "TIMED",
-      "home": "Eintracht Frankfurt",
-      "away": "1. FC K\u00f6ln",
-      "pick": "Model pending",
-      "confidence": null
-    },
     {
       "id": 558573,
       "league": "Serie A",
