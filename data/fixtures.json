@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-18T00:53:15Z",
+  "updated": "2026-10-18T06:47:40Z",
   "date_range": {
     "from": "2026-10-18",
     "to": "2026-10-25"
@@ -326,17 +326,6 @@
       "confidence": null
     },
     {
-      "id": 564719,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-10-23T19:00:00Z",
-      "status": "TIMED",
-      "home": "Deportivo Alav\u00e9s",
-      "away": "M\u00e1laga CF",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560620,
       "league": "Premier League",
       "competition_code": "PL",
@@ -344,6 +333,17 @@
       "status": "TIMED",
       "home": "Ipswich Town FC",
       "away": "Nottingham Forest FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 564719,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-10-23T19:00:00Z",
+      "status": "TIMED",
+      "home": "Deportivo Alav\u00e9s",
+      "away": "M\u00e1laga CF",
       "pick": "Model pending",
       "confidence": null
     },
