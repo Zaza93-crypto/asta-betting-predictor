@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-25T06:50:09Z",
+  "updated": "2026-10-25T12:47:22Z",
   "date_range": {
     "from": "2026-10-25",
     "to": "2026-11-01"
@@ -16,7 +16,7 @@
     },
     "Serie A": {
       "competition_code": "SA",
-      "upcoming_fixtures": 18
+      "upcoming_fixtures": 17
     },
     "Bundesliga": {
       "competition_code": "BL1",
@@ -29,17 +29,6 @@
   },
   "matches": [
     {
-      "id": 558563,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-10-25T11:30:00Z",
-      "status": "TIMED",
-      "home": "FC Internazionale Milano",
-      "away": "ACF Fiorentina",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 564720,
       "league": "La Liga",
       "competition_code": "PD",
@@ -47,6 +36,17 @@
       "status": "TIMED",
       "home": "Athletic Club",
       "away": "Getafe CF",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560613,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-10-25T14:00:00Z",
+      "status": "TIMED",
+      "home": "Crystal Palace FC",
+      "away": "Newcastle United FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -80,17 +80,6 @@
       "status": "TIMED",
       "home": "Genoa CFC",
       "away": "Venezia FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560613,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-10-25T14:00:00Z",
-      "status": "TIMED",
-      "home": "Crystal Palace FC",
-      "away": "Newcastle United FC",
       "pick": "Model pending",
       "confidence": null
     },
