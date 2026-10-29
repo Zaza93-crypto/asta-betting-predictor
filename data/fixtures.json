@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-29T12:59:15Z",
+  "updated": "2026-10-29T22:44:28Z",
   "date_range": {
     "from": "2026-10-29",
     "to": "2026-11-05"
@@ -16,7 +16,7 @@
     },
     "Serie A": {
       "competition_code": "SA",
-      "upcoming_fixtures": 12
+      "upcoming_fixtures": 10
     },
     "Bundesliga": {
       "competition_code": "BL1",
@@ -28,28 +28,6 @@
     }
   },
   "matches": [
-    {
-      "id": 558558,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-10-29T17:30:00Z",
-      "status": "TIMED",
-      "home": "Frosinone Calcio",
-      "away": "US Lecce",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 558551,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-10-29T19:45:00Z",
-      "status": "TIMED",
-      "home": "ACF Fiorentina",
-      "away": "Atalanta BC",
-      "pick": "Model pending",
-      "confidence": null
-    },
     {
       "id": 559644,
       "league": "Ligue 1",
