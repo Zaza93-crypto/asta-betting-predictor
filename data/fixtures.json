@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-10-31T05:39:00Z",
+  "updated": "2026-10-31T12:26:51Z",
   "date_range": {
     "from": "2026-10-31",
     "to": "2026-11-07"
@@ -117,39 +117,6 @@
       "confidence": null
     },
     {
-      "id": 560629,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-10-31T15:00:00Z",
-      "status": "TIMED",
-      "home": "Hull City AFC",
-      "away": "Ipswich Town FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560625,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-10-31T15:00:00Z",
-      "status": "TIMED",
-      "home": "Coventry City FC",
-      "away": "Sunderland AFC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560623,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-10-31T15:00:00Z",
-      "status": "TIMED",
-      "home": "Manchester City FC",
-      "away": "Brighton & Hove Albion FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560624,
       "league": "Premier League",
       "competition_code": "PL",
@@ -168,6 +135,39 @@
       "status": "TIMED",
       "home": "Brentford FC",
       "away": "Nottingham Forest FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560623,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-10-31T15:00:00Z",
+      "status": "TIMED",
+      "home": "Manchester City FC",
+      "away": "Brighton & Hove Albion FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560629,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-10-31T15:00:00Z",
+      "status": "TIMED",
+      "home": "Hull City AFC",
+      "away": "Ipswich Town FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560625,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-10-31T15:00:00Z",
+      "status": "TIMED",
+      "home": "Coventry City FC",
+      "away": "Sunderland AFC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -205,17 +205,6 @@
       "confidence": null
     },
     {
-      "id": 565845,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-10-31T17:30:00Z",
-      "status": "TIMED",
-      "home": "FC Bayern M\u00fcnchen",
-      "away": "Borussia Dortmund",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 564736,
       "league": "La Liga",
       "competition_code": "PD",
@@ -223,6 +212,17 @@
       "status": "TIMED",
       "home": "Real Betis Balompi\u00e9",
       "away": "M\u00e1laga CF",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 565845,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-10-31T17:30:00Z",
+      "status": "TIMED",
+      "home": "FC Bayern M\u00fcnchen",
+      "away": "Borussia Dortmund",
       "pick": "Model pending",
       "confidence": null
     },
@@ -249,17 +249,6 @@
       "confidence": null
     },
     {
-      "id": 564732,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-10-31T20:00:00Z",
-      "status": "TIMED",
-      "home": "FC Barcelona",
-      "away": "Deportivo Alav\u00e9s",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560628,
       "league": "Premier League",
       "competition_code": "PL",
@@ -267,6 +256,17 @@
       "status": "TIMED",
       "home": "Aston Villa FC",
       "away": "Fulham FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 564732,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-10-31T20:00:00Z",
+      "status": "TIMED",
+      "home": "FC Barcelona",
+      "away": "Deportivo Alav\u00e9s",
       "pick": "Model pending",
       "confidence": null
     },
@@ -348,17 +348,6 @@
       "confidence": null
     },
     {
-      "id": 559640,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-01T16:15:00Z",
-      "status": "TIMED",
-      "home": "Olympique Lyonnais",
-      "away": "Angers SCO",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 559642,
       "league": "Ligue 1",
       "competition_code": "FL1",
@@ -370,13 +359,13 @@
       "confidence": null
     },
     {
-      "id": 560631,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-01T16:30:00Z",
+      "id": 559640,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-01T16:15:00Z",
       "status": "TIMED",
-      "home": "Liverpool FC",
-      "away": "Arsenal FC",
+      "home": "Olympique Lyonnais",
+      "away": "Angers SCO",
       "pick": "Model pending",
       "confidence": null
     },
@@ -388,6 +377,17 @@
       "status": "TIMED",
       "home": "Eintracht Frankfurt",
       "away": "Hamburger SV",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560631,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-01T16:30:00Z",
+      "status": "TIMED",
+      "home": "Liverpool FC",
+      "away": "Arsenal FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -480,17 +480,6 @@
       "confidence": null
     },
     {
-      "id": 564731,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-02T20:00:00Z",
-      "status": "TIMED",
-      "home": "RC Deportivo La Coru\u00f1a",
-      "away": "CA Osasuna",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560622,
       "league": "Premier League",
       "competition_code": "PL",
@@ -498,6 +487,17 @@
       "status": "TIMED",
       "home": "Newcastle United FC",
       "away": "Everton FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 564731,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-11-02T20:00:00Z",
+      "status": "TIMED",
+      "home": "RC Deportivo La Coru\u00f1a",
+      "away": "CA Osasuna",
       "pick": "Model pending",
       "confidence": null
     },
@@ -535,17 +535,6 @@
       "confidence": null
     },
     {
-      "id": 564740,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-06T20:00:00Z",
-      "status": "TIMED",
-      "home": "Sevilla FC",
-      "away": "Deportivo Alav\u00e9s",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560634,
       "league": "Premier League",
       "competition_code": "PL",
@@ -553,6 +542,17 @@
       "status": "TIMED",
       "home": "Everton FC",
       "away": "Coventry City FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 564740,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-11-06T20:00:00Z",
+      "status": "TIMED",
+      "home": "Sevilla FC",
+      "away": "Deportivo Alav\u00e9s",
       "pick": "Model pending",
       "confidence": null
     }
