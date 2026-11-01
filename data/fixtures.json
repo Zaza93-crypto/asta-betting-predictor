@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-11-01T06:01:51Z",
+  "updated": "2026-11-01T13:22:18Z",
   "date_range": {
     "from": "2026-11-01",
     "to": "2026-11-08"
@@ -12,11 +12,11 @@
     },
     "La Liga": {
       "competition_code": "PD",
-      "upcoming_fixtures": 10
+      "upcoming_fixtures": 9
     },
     "Serie A": {
       "competition_code": "SA",
-      "upcoming_fixtures": 12
+      "upcoming_fixtures": 11
     },
     "Bundesliga": {
       "competition_code": "BL1",
@@ -28,28 +28,6 @@
     }
   },
   "matches": [
-    {
-      "id": 558543,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-11-01T11:30:00Z",
-      "status": "TIMED",
-      "home": "Como 1907",
-      "away": "Venezia FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 564733,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-01T13:00:00Z",
-      "status": "TIMED",
-      "home": "Getafe CF",
-      "away": "Sevilla FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
     {
       "id": 559647,
       "league": "Ligue 1",
@@ -238,17 +216,6 @@
       "confidence": null
     },
     {
-      "id": 560622,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-02T20:00:00Z",
-      "status": "TIMED",
-      "home": "Newcastle United FC",
-      "away": "Everton FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 564731,
       "league": "La Liga",
       "competition_code": "PD",
@@ -256,6 +223,17 @@
       "status": "TIMED",
       "home": "RC Deportivo La Coru\u00f1a",
       "away": "CA Osasuna",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560622,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-02T20:00:00Z",
+      "status": "TIMED",
+      "home": "Newcastle United FC",
+      "away": "Everton FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -403,17 +381,6 @@
       "confidence": null
     },
     {
-      "id": 560640,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-07T15:00:00Z",
-      "status": "TIMED",
-      "home": "Arsenal FC",
-      "away": "Hull City AFC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560633,
       "league": "Premier League",
       "competition_code": "PL",
@@ -421,6 +388,17 @@
       "status": "TIMED",
       "home": "Fulham FC",
       "away": "Newcastle United FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560640,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-07T15:00:00Z",
+      "status": "TIMED",
+      "home": "Arsenal FC",
+      "away": "Hull City AFC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -458,17 +436,6 @@
       "confidence": null
     },
     {
-      "id": 564739,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-07T17:30:00Z",
-      "status": "TIMED",
-      "home": "CA Osasuna",
-      "away": "Athletic Club",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 565849,
       "league": "Bundesliga",
       "competition_code": "BL1",
@@ -476,6 +443,17 @@
       "status": "TIMED",
       "home": "VfB Stuttgart",
       "away": "SV Werder Bremen",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 564739,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-11-07T17:30:00Z",
+      "status": "TIMED",
+      "home": "CA Osasuna",
+      "away": "Athletic Club",
       "pick": "Model pending",
       "confidence": null
     },
