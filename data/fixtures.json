@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-11-03T14:12:08Z",
+  "updated": "2026-11-03T23:22:37Z",
   "date_range": {
     "from": "2026-11-03",
     "to": "2026-11-10"
@@ -40,17 +40,6 @@
       "confidence": null
     },
     {
-      "id": 558537,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-11-06T19:45:00Z",
-      "status": "TIMED",
-      "home": "Venezia FC",
-      "away": "Udinese Calcio",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 559638,
       "league": "Ligue 1",
       "competition_code": "FL1",
@@ -62,13 +51,13 @@
       "confidence": null
     },
     {
-      "id": 560634,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-06T20:00:00Z",
+      "id": 558537,
+      "league": "Serie A",
+      "competition_code": "SA",
+      "date": "2026-11-06T19:45:00Z",
       "status": "TIMED",
-      "home": "Everton FC",
-      "away": "Coventry City FC",
+      "home": "Venezia FC",
+      "away": "Udinese Calcio",
       "pick": "Model pending",
       "confidence": null
     },
@@ -80,6 +69,17 @@
       "status": "TIMED",
       "home": "Sevilla FC",
       "away": "Deportivo Alav\u00e9s",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560634,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-06T20:00:00Z",
+      "status": "TIMED",
+      "home": "Everton FC",
+      "away": "Coventry City FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -106,17 +106,6 @@
       "confidence": null
     },
     {
-      "id": 558532,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-11-07T14:00:00Z",
-      "status": "TIMED",
-      "home": "Torino FC",
-      "away": "US Lecce",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 558534,
       "league": "Serie A",
       "competition_code": "SA",
@@ -128,35 +117,13 @@
       "confidence": null
     },
     {
-      "id": 565853,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T14:30:00Z",
+      "id": 558532,
+      "league": "Serie A",
+      "competition_code": "SA",
+      "date": "2026-11-07T14:00:00Z",
       "status": "TIMED",
-      "home": "SC Paderborn 07",
-      "away": "Eintracht Frankfurt",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 565851,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T14:30:00Z",
-      "status": "TIMED",
-      "home": "1. FSV Mainz 05",
-      "away": "FC Bayern M\u00fcnchen",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 565848,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T14:30:00Z",
-      "status": "TIMED",
-      "home": "RB Leipzig",
-      "away": "FC Augsburg",
+      "home": "Torino FC",
+      "away": "US Lecce",
       "pick": "Model pending",
       "confidence": null
     },
@@ -172,13 +139,35 @@
       "confidence": null
     },
     {
-      "id": 560640,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-07T15:00:00Z",
+      "id": 565848,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T14:30:00Z",
       "status": "TIMED",
-      "home": "Arsenal FC",
-      "away": "Hull City AFC",
+      "home": "RB Leipzig",
+      "away": "FC Augsburg",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 565851,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T14:30:00Z",
+      "status": "TIMED",
+      "home": "1. FSV Mainz 05",
+      "away": "FC Bayern M\u00fcnchen",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 565853,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T14:30:00Z",
+      "status": "TIMED",
+      "home": "SC Paderborn 07",
+      "away": "Eintracht Frankfurt",
       "pick": "Model pending",
       "confidence": null
     },
@@ -190,6 +179,17 @@
       "status": "TIMED",
       "home": "Fulham FC",
       "away": "Newcastle United FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560640,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-07T15:00:00Z",
+      "status": "TIMED",
+      "home": "Arsenal FC",
+      "away": "Hull City AFC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -227,6 +227,17 @@
       "confidence": null
     },
     {
+      "id": 560641,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-07T17:30:00Z",
+      "status": "TIMED",
+      "home": "Nottingham Forest FC",
+      "away": "Manchester City FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
       "id": 564739,
       "league": "La Liga",
       "competition_code": "PD",
@@ -249,13 +260,13 @@
       "confidence": null
     },
     {
-      "id": 560641,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-07T17:30:00Z",
+      "id": 558531,
+      "league": "Serie A",
+      "competition_code": "SA",
+      "date": "2026-11-07T19:45:00Z",
       "status": "TIMED",
-      "home": "Nottingham Forest FC",
-      "away": "Manchester City FC",
+      "home": "AS Roma",
+      "away": "US Sassuolo Calcio",
       "pick": "Model pending",
       "confidence": null
     },
@@ -267,17 +278,6 @@
       "status": "TIMED",
       "home": "Paris Saint-Germain FC",
       "away": "ES Troyes AC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 558531,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-11-07T19:45:00Z",
-      "status": "TIMED",
-      "home": "AS Roma",
-      "away": "US Sassuolo Calcio",
       "pick": "Model pending",
       "confidence": null
     },
@@ -315,13 +315,46 @@
       "confidence": null
     },
     {
-      "id": 558536,
-      "league": "Serie A",
-      "competition_code": "SA",
+      "id": 560637,
+      "league": "Premier League",
+      "competition_code": "PL",
       "date": "2026-11-08T14:00:00Z",
       "status": "TIMED",
-      "home": "Genoa CFC",
-      "away": "AC Milan",
+      "home": "Ipswich Town FC",
+      "away": "AFC Bournemouth",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560635,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-08T14:00:00Z",
+      "status": "TIMED",
+      "home": "Crystal Palace FC",
+      "away": "Liverpool FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 559636,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-08T14:00:00Z",
+      "status": "TIMED",
+      "home": "Stade Rennais FC 1901",
+      "away": "Lille OSC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 560636,
+      "league": "Premier League",
+      "competition_code": "PL",
+      "date": "2026-11-08T14:00:00Z",
+      "status": "TIMED",
+      "home": "Sunderland AFC",
+      "away": "Chelsea FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -348,46 +381,13 @@
       "confidence": null
     },
     {
-      "id": 560636,
-      "league": "Premier League",
-      "competition_code": "PL",
+      "id": 558536,
+      "league": "Serie A",
+      "competition_code": "SA",
       "date": "2026-11-08T14:00:00Z",
       "status": "TIMED",
-      "home": "Sunderland AFC",
-      "away": "Chelsea FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 559636,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-08T14:00:00Z",
-      "status": "TIMED",
-      "home": "Stade Rennais FC 1901",
-      "away": "Lille OSC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560637,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-08T14:00:00Z",
-      "status": "TIMED",
-      "home": "Ipswich Town FC",
-      "away": "AFC Bournemouth",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560635,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-08T14:00:00Z",
-      "status": "TIMED",
-      "home": "Crystal Palace FC",
-      "away": "Liverpool FC",
+      "home": "Genoa CFC",
+      "away": "AC Milan",
       "pick": "Model pending",
       "confidence": null
     },
@@ -414,28 +414,6 @@
       "confidence": null
     },
     {
-      "id": 559631,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-08T16:15:00Z",
-      "status": "TIMED",
-      "home": "Le Mans FC",
-      "away": "AS Monaco FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 559633,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-08T16:15:00Z",
-      "status": "TIMED",
-      "home": "Le Havre AC",
-      "away": "FC Lorient",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 559632,
       "league": "Ligue 1",
       "competition_code": "FL1",
@@ -458,13 +436,24 @@
       "confidence": null
     },
     {
-      "id": 565854,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-08T16:30:00Z",
+      "id": 559633,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-08T16:15:00Z",
       "status": "TIMED",
-      "home": "SC Freiburg",
-      "away": "1. FC Union Berlin",
+      "home": "Le Havre AC",
+      "away": "FC Lorient",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 559631,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-08T16:15:00Z",
+      "status": "TIMED",
+      "home": "Le Mans FC",
+      "away": "AS Monaco FC",
       "pick": "Model pending",
       "confidence": null
     },
@@ -480,6 +469,17 @@
       "confidence": null
     },
     {
+      "id": 565854,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-08T16:30:00Z",
+      "status": "TIMED",
+      "home": "SC Freiburg",
+      "away": "1. FC Union Berlin",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
       "id": 558530,
       "league": "Serie A",
       "competition_code": "SA",
@@ -487,17 +487,6 @@
       "status": "TIMED",
       "home": "FC Internazionale Milano",
       "away": "Como 1907",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 564747,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-08T17:30:00Z",
-      "status": "TIMED",
-      "home": "Villarreal CF",
-      "away": "Getafe CF",
       "pick": "Model pending",
       "confidence": null
     },
@@ -513,6 +502,17 @@
       "confidence": null
     },
     {
+      "id": 564747,
+      "league": "La Liga",
+      "competition_code": "PD",
+      "date": "2026-11-08T17:30:00Z",
+      "status": "TIMED",
+      "home": "Villarreal CF",
+      "away": "Getafe CF",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
       "id": 565856,
       "league": "Bundesliga",
       "competition_code": "BL1",
@@ -524,17 +524,6 @@
       "confidence": null
     },
     {
-      "id": 559630,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-08T19:45:00Z",
-      "status": "TIMED",
-      "home": "Racing Club de Lens",
-      "away": "Olympique de Marseille",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 558529,
       "league": "Serie A",
       "competition_code": "SA",
@@ -542,6 +531,17 @@
       "status": "TIMED",
       "home": "ACF Fiorentina",
       "away": "Juventus FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 559630,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-08T19:45:00Z",
+      "status": "TIMED",
+      "home": "Racing Club de Lens",
+      "away": "Olympique de Marseille",
       "pick": "Model pending",
       "confidence": null
     },
