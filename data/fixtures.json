@@ -1,9 +1,9 @@
 {
   "source": "football-data.org",
-  "updated": "2026-11-05T19:56:15Z",
+  "updated": "2026-11-06T06:42:36Z",
   "date_range": {
-    "from": "2026-11-05",
-    "to": "2026-11-12"
+    "from": "2026-11-06",
+    "to": "2026-11-13"
   },
   "league_report": {
     "Premier League": {
@@ -128,6 +128,28 @@
       "confidence": null
     },
     {
+      "id": 565848,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T14:30:00Z",
+      "status": "TIMED",
+      "home": "RB Leipzig",
+      "away": "FC Augsburg",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 565850,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T14:30:00Z",
+      "status": "TIMED",
+      "home": "Borussia Dortmund",
+      "away": "SV 07 Elversberg",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
       "id": 565851,
       "league": "Bundesliga",
       "competition_code": "BL1",
@@ -146,28 +168,6 @@
       "status": "TIMED",
       "home": "SC Paderborn 07",
       "away": "Eintracht Frankfurt",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 565850,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T14:30:00Z",
-      "status": "TIMED",
-      "home": "Borussia Dortmund",
-      "away": "SV 07 Elversberg",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 565848,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T14:30:00Z",
-      "status": "TIMED",
-      "home": "RB Leipzig",
-      "away": "FC Augsburg",
       "pick": "Model pending",
       "confidence": null
     },
@@ -216,17 +216,6 @@
       "confidence": null
     },
     {
-      "id": 565849,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-07T17:30:00Z",
-      "status": "TIMED",
-      "home": "VfB Stuttgart",
-      "away": "SV Werder Bremen",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560641,
       "league": "Premier League",
       "competition_code": "PL",
@@ -234,6 +223,17 @@
       "status": "TIMED",
       "home": "Nottingham Forest FC",
       "away": "Manchester City FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 565849,
+      "league": "Bundesliga",
+      "competition_code": "BL1",
+      "date": "2026-11-07T17:30:00Z",
+      "status": "TIMED",
+      "home": "VfB Stuttgart",
+      "away": "SV Werder Bremen",
       "pick": "Model pending",
       "confidence": null
     },
@@ -315,17 +315,6 @@
       "confidence": null
     },
     {
-      "id": 559636,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-08T14:00:00Z",
-      "status": "TIMED",
-      "home": "Stade Rennais FC 1901",
-      "away": "Lille OSC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
       "id": 560636,
       "league": "Premier League",
       "competition_code": "PL",
@@ -344,6 +333,17 @@
       "status": "TIMED",
       "home": "Brighton & Hove Albion FC",
       "away": "Brentford FC",
+      "pick": "Model pending",
+      "confidence": null
+    },
+    {
+      "id": 559636,
+      "league": "Ligue 1",
+      "competition_code": "FL1",
+      "date": "2026-11-08T14:00:00Z",
+      "status": "TIMED",
+      "home": "Stade Rennais FC 1901",
+      "away": "Lille OSC",
       "pick": "Model pending",
       "confidence": null
     },
