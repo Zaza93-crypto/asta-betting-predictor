@@ -1,6 +1,6 @@
 {
   "model_version": "asta-v3-final-walkforward-logistic",
-  "updated_at": "2026-11-14T18:24:30.092742+00:00",
+  "updated_at": "2026-11-14T22:23:09.965988+00:00",
   "predictions": [
     {
       "fixture_id": "565820",
@@ -6294,7 +6294,7 @@
       "decision": "BET_CANDIDATE",
       "eligible_for_primary_picks": true,
       "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-11-14T17:59:48.571789+00:00",
+      "generated_at": "2026-11-14T22:23:09.965988+00:00",
       "result_status": "PENDING_RESULT",
       "actual_result": null,
       "actual_home_goals": null,
@@ -6319,7 +6319,7 @@
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
       "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-11-14T17:59:48.571789+00:00",
+      "generated_at": "2026-11-14T22:23:09.965988+00:00",
       "result_status": "PENDING_RESULT",
       "actual_result": null,
       "actual_home_goals": null,
@@ -6344,7 +6344,7 @@
       "decision": "SKIP",
       "eligible_for_primary_picks": false,
       "model_version": "asta-v3-final-walkforward-logistic",
-      "generated_at": "2026-11-14T17:59:48.571789+00:00",
+      "generated_at": "2026-11-14T22:23:09.965988+00:00",
       "result_status": "PENDING_RESULT",
       "actual_result": null,
       "actual_home_goals": null,
@@ -6352,27 +6352,5 @@
       "correct": null,
       "resolved_at": null
     }
-  ],
-  "performance": {
-    "tracked": 0,
-    "correct": 0,
-    "accuracy": null,
-    "confidence_bands": {
-      "HIGH_65_PLUS": {
-        "matches": 0,
-        "correct": 0,
-        "accuracy": null
-      },
-      "MEDIUM_55_64": {
-        "matches": 0,
-        "correct": 0,
-        "accuracy": null
-      },
-      "LOW_UNDER_55": {
-        "matches": 0,
-        "correct": 0,
-        "accuracy": null
-      }
-    }
-  }
+  ]
 }
