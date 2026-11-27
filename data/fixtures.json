@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "updated": "2026-11-27T08:29:19Z",
+  "updated": "2026-11-27T21:15:39Z",
   "date_range": {
     "from": "2026-11-27",
     "to": "2026-12-04"
@@ -8,81 +8,26 @@
   "league_report": {
     "Premier League": {
       "competition_code": "PL",
-      "upcoming_fixtures": 20
+      "upcoming_fixtures": 19
     },
     "La Liga": {
       "competition_code": "PD",
-      "upcoming_fixtures": 12
+      "upcoming_fixtures": 11
     },
     "Serie A": {
       "competition_code": "SA",
-      "upcoming_fixtures": 10
+      "upcoming_fixtures": 9
     },
     "Bundesliga": {
       "competition_code": "BL1",
-      "upcoming_fixtures": 9
+      "upcoming_fixtures": 8
     },
     "Ligue 1": {
       "competition_code": "FL1",
-      "upcoming_fixtures": 9
+      "upcoming_fixtures": 8
     }
   },
   "matches": [
-    {
-      "id": 565869,
-      "league": "Bundesliga",
-      "competition_code": "BL1",
-      "date": "2026-11-27T19:30:00Z",
-      "status": "TIMED",
-      "home": "SV Werder Bremen",
-      "away": "Borussia M\u00f6nchengladbach",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 559616,
-      "league": "Ligue 1",
-      "competition_code": "FL1",
-      "date": "2026-11-27T19:45:00Z",
-      "status": "TIMED",
-      "home": "Stade Brestois 29",
-      "away": "Paris FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 558515,
-      "league": "Serie A",
-      "competition_code": "SA",
-      "date": "2026-11-27T19:45:00Z",
-      "status": "TIMED",
-      "home": "Venezia FC",
-      "away": "Bologna FC 1909",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 564765,
-      "league": "La Liga",
-      "competition_code": "PD",
-      "date": "2026-11-27T20:00:00Z",
-      "status": "TIMED",
-      "home": "Levante UD",
-      "away": "Real Racing Club de Santander",
-      "pick": "Model pending",
-      "confidence": null
-    },
-    {
-      "id": 560658,
-      "league": "Premier League",
-      "competition_code": "PL",
-      "date": "2026-11-27T20:00:00Z",
-      "status": "TIMED",
-      "home": "Nottingham Forest FC",
-      "away": "Chelsea FC",
-      "pick": "Model pending",
-      "confidence": null
-    },
     {
       "id": 564760,
       "league": "La Liga",
